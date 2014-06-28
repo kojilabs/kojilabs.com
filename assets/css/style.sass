@@ -145,8 +145,8 @@ header
 
 #home-projects
   .project
-    height: 250px
-    background: #999
+    height: 285px
+    background-color: $purple
     padding-left: 0
     padding-right: 0
     position: relative
@@ -160,20 +160,24 @@ header
     a,
     a:visited
       display: block
-      height: 250px
+      height: 285px
       color: $text_color
 
       &:hover,
       &:focus
         color: $text_color
 
+    img
+      width: 100%
+      opacity: 1
+      transition: opacity 200ms ease-in-out
+
     .project-info
       background: #FFF
-      padding: 1em $gd_padding
+      padding: 1.4em $gd_padding
       position: absolute
       width: 100%
       left: 0
-      // top: 250px
       bottom: 0
       transition: top 200ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in-out
 
@@ -200,8 +204,11 @@ header
 
 
     &:hover
+      img
+        opacity: 0
+
       .project-info
-        background: $green
+        background: $purple
         color: #FFF
 
         .project-tech
@@ -216,7 +223,7 @@ header
     border-left: 1px solid #F7F7F7
 
     &:first-child
-      border: 0
+      border-left: 0
 
     a,
     a:visited
@@ -239,7 +246,7 @@ header
       font-size: 0.9em
 
     &:hover
-      background: $green
+      background: $purple
       border-color: transparent
 
       h3
@@ -293,6 +300,14 @@ footer
     font-size: 0.8em
     margin-top: $gd_padding
     color: #666
+
+    a,
+    a:visited
+      color: #666
+
+      &:hover,
+      &:focus
+        color: $green
 
     p
       margin-bottom: 0

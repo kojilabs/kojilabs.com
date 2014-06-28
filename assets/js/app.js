@@ -97,8 +97,8 @@ $(document).ready(function(){
   	'width': '100px',
 		'margin-top': '-50px',
 		'margin-left': '-50px',
-		delay: 750
-  }, 250, 'snap');
+		delay: 400
+  }, 550, 'cubic-bezier(.37,.13,.96,.25)');
   $('.ball.one').transition({ 'display': 'none' }, 0);
 
   $('.ball.two').transition({ 
@@ -107,7 +107,7 @@ $(document).ready(function(){
 		'margin-top': '0',
 		'margin-left': '0',
 		delay: 500
-  }, 800, 'snap');
+  }, 400, 'snap');
   $('.ball.two').transition({ 'display': 'none' }, 0);
 
 
