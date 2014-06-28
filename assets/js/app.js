@@ -107,7 +107,7 @@ $(document).ready(function(){
 		'margin-top': '0',
 		'margin-left': '0',
 		delay: 500
-  }, 500, 'snap');
+  }, 800, 'snap');
   $('.ball.two').transition({ 'display': 'none' }, 0);
 
 
