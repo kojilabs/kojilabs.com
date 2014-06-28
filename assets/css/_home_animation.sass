@@ -1,0 +1,58 @@
+#home-feature
+	position: relative
+	overflow: hidden
+
+	.ball
+		position: absolute
+		z-index: 997
+		border-radius: 200px
+		// background: #3C3C3C
+		background: $green
+		// border: 2px solid #000
+		width: 0
+		height: 0
+		color: transparent
+		overflow: hidden
+		-webkit-backface-visibility: hidden
+		-webkit-transition: translate3d(0,0,0)
+
+		&.one
+			left: 20%
+			top: 50%
+			// background: $green
+
+		&.two
+			left: 55%
+			top: 15%
+			// background: $blue
+
+		&.three
+			left: 80%
+			top: 70%
+			// background: $purple
+
+		&.four
+			left: 45%
+			top: 80%
+			// background: $orange
+
+	.brand
+		position: relative
+		z-index: 998
+		margin-top: 2.95em
+		font-size: 5em
+		font-weight: bold
+		text-align: center
+		text-transform: uppercase
+		color: #FFF
+		opacity: 0
+
+	.slogan
+		position: relative
+		z-index: 998
+		text-align: center
+		font-size: 1.8em
+		margin-top: 0.5em
+		font-weight: 100
+		color: #FFF
+		opacity: 0

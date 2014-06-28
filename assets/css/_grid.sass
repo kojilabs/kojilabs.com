@@ -1,0 +1,142 @@
+/*
+ *  File: Grid System
+ *  Author: Matt West <matt.west@kojilabs.com>
+ */
+
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+
+$gd-container-width: 1200px
+$gd-column-width: 100%/12
+$gd-padding: 1.75em
+
+
+.clearfix
+  *zoom: 1
+
+.clearfix:before,
+.clearfix:after
+  display: table
+  line-height: 0
+  content: ""
+
+.clearfix:after
+  clear: both
+
+
+.container
+  @extend .clearfix
+  margin: 0 auto
+  width: 100%
+  max-width: $gd-container-width
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1)
+
+.column,
+.columns
+  float: left
+  display: inline-block
+  padding-left: $gd-padding
+  padding-right: $gd-padding
+  vertical-align: top
+
+  &.twelve
+    width: $gd-column-width * 12
+
+  &.eleven
+    width: $gd-column-width * 11
+
+  &.ten
+    width: $gd-column-width * 10
+
+  &.nine
+    width: $gd-column-width * 9
+
+  &.eight
+    width: $gd-column-width * 8
+
+  &.seven
+    width: $gd-column-width * 7
+
+  &.six
+    width: $gd-column-width * 6
+
+  &.five
+    width: $gd-column-width * 5
+
+  &.four
+    width: $gd-column-width * 4
+
+  &.three
+    width: $gd-column-width * 3
+
+  &.two
+    width: $gd-column-width * 2
+
+  &.one
+    width: $gd-column-width * 1
+
+.row
+  float: left
+  display: block
+  width: 100%
+  padding-left: 0
+  padding-right: 0
+  @extend .clearfix
+
+.no-padding
+  padding-left: 0
+  padding-right: 0
+
+
+/////////////////////////
+// Responsive goodness
+/////////////////////////
+
+@media screen and (min-width: 0px) and (max-width: 860px)
+
+  .column,
+  .columns
+    padding-left: 1em
+    padding-right: 1em
+
+    &.twelve
+      width: $gd-column-width * 12
+
+    &.eleven
+      width: $gd-column-width * 12
+
+    &.ten
+      width: $gd-column-width * 12
+
+    &.nine
+      width: $gd-column-width * 12
+
+    &.eight
+      width: $gd-column-width * 12
+
+    &.seven
+      width: $gd-column-width * 12
+
+    &.six
+      width: $gd-column-width * 12
+
+    &.five
+      width: $gd-column-width * 12
+
+    &.four
+      width: $gd-column-width * 12
+
+      &:nth-child(3)
+        width: $gd-column-width * 12
+
+    &.three
+      width: $gd-column-width * 12
+
+    &.two
+      width: $gd-column-width * 12
+
+    &.one
+      width: $gd-column-width * 12

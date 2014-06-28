@@ -1,0 +1,289 @@
+$purple: #811fab
+$green: #1fab26
+$orange: #cc8b25
+$blue: #1f86ab
+
+$text_color: #161616
+
+@import "_grid"
+
+html
+  height: 100%
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif
+  text-rendering: optimizelegibility
+  -webkit-font-smoothing: antialiased
+
+body
+  background: #F7F7F7
+  color: $text_color
+
+a,
+a:visited
+  color: $purple
+  text-decoration: none
+  transition: color 200ms ease-in-out
+
+  &:hover,
+  &:focus
+    color: $green
+
+
+#page-container
+  background: #FFF
+  position: relative
+
+header
+  background: #FFF
+  height: 80px
+  overflow: hidden
+  margin-bottom: $gd_padding !important
+  
+  .logo
+    float: left
+
+    a,
+    a:visited
+      display: block
+      background: $purple
+      height: 80px
+      width: 80px
+
+  .contact
+    float: right
+    text-decoration: none
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 0.7em
+    padding: 3em 2em
+    letter-spacing: 0.25px
+
+    a,
+    a:visited
+      display: inline-block
+      margin-left: $gd_padding
+      color: #000
+
+      &:hover,
+      &:focus
+        color: $green
+
+      i
+        margin-right: 0.3em
+        color: $purple
+
+  nav
+    float: left
+
+    ul
+      padding: 0
+      margin: 0
+      list-style: none
+
+      li
+        display: inline-block
+
+        a,
+        a:visited
+          display: inline-block
+          padding: 3em 2em
+          color: #000
+          text-decoration: none
+          font-weight: bold
+          text-transform: uppercase
+          letter-spacing: 0.25px
+          font-size: 0.7em
+          position: relative
+          z-index: 999
+          transition: none
+
+          &:hover,
+          &:focus
+            background: #161616
+            color: #FFF
+
+          .plus
+            position: relative
+            top: -1.5px
+
+        &:hover
+          a,
+          a:visited
+            background: #161616
+            color: #FFF
+        
+        ul.sub-nav
+          display: none
+          position: absolute
+          top: 80px
+          width: 250px
+
+          &:hover
+            display: block
+
+          li
+            display: block
+
+          a,
+          a:visited
+            background: #161616
+            color: #FFF
+            display: block
+            padding: 1.5em 2em
+
+            &:hover,
+            &:focus
+              background: $purple
+
+        a:hover,
+        a:focus
+          &+ul.sub-nav
+            display: block
+      
+
+
+#home-feature
+  height: 600px
+
+
+#home-projects
+  .project
+    height: 250px
+    background: #999
+    padding-left: 0
+    padding-right: 0
+    position: relative
+    overflow: hidden
+    border-bottom: 1px solid #EEE
+    border-left: 1px solid #EEE
+
+    &:first-child
+      border-left: 0
+
+
+    a,
+    a:visited
+      display: block
+      height: 250px
+      color: $text_color
+
+      &:hover,
+      &:focus
+        color: $text_color
+
+    .project-info
+      background: #FFF
+      padding: 1em $gd_padding
+      position: absolute
+      width: 100%
+      left: 0
+      top: 250px
+      transition: top 200ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in-out
+
+      .project-title
+        font-weight: bold
+        line-height: 1.6
+
+      .project-tech
+        color: #999
+        font-size: 0.9em
+        transition: color 200ms ease-in-out
+
+        .plus
+          position: relative
+          top: -1.5px
+
+      // &:hover
+      //   background: $green
+      //   color: #FFF
+
+      //   .project-tech
+      //     color: #FFF
+
+
+
+    &:hover
+      .project-info
+        top: 177px
+
+#home-blog
+  .post
+    min-height: 250px
+    padding: $gd_padding
+    transition: background 200ms ease-in-out
+    border-left: 1px solid #EEE
+
+    &:first-child
+      border: 0
+
+    a,
+    a:visited
+      display: block
+      color: $text_color
+      transition: color 200ms ease-in-out
+
+      &:hover,
+      &:focus
+        color: #FFF
+
+    h3
+      font-size: 2.4em
+      line-height: 1.25
+      font-weight: 800
+
+    .post-date
+      color: #999
+      margin-top: 1em
+      font-size: 0.9em
+
+    &:hover
+      background: $green
+      border-color: transparent
+
+      h3
+        color: #FFF
+
+      .post-date
+        color: #FFF
+
+
+
+footer
+  margin-top: $gd_padding !important
+  padding: $gd_padding*2.5 $gd_padding*2 !important
+  background: #FFF
+
+  h4
+    text-transform: uppercase
+    font-size: 1.2em
+    font-weight: bold
+    color: $green
+
+    &.footer-logo
+      color: $purple
+      font-size: 2em
+      text-transform: uppercase
+
+
+  .sub-text
+    font-size: 0.8em
+    margin-top: $gd_padding
+    color: #666
+
+  
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+  
+  /* Styles for mobile */
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+
+  /* Styles for tablet */
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5)
+
+  /* Don't forget your Retina CSS! */
+
+
+@import "_home_animation"
