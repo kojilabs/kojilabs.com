@@ -1,0 +1,72 @@
+h1
+	text-align: left
+	font-size: 5.5em
+	line-height: 1.25
+	margin-top: 0
+	margin-bottom: 1em
+
+	span
+		display: block
+
+h2
+	color: $green
+	text-transform: uppercase
+	font-size: 2em
+	font-weight: bold
+
+p
+	line-height: 1.8
+	margin: $gd_padding 0
+
+	&.first
+		font-size: 1.3em
+		line-height: 1.6
+		margin: 0
+
+sup
+	position: relative
+	left: 1px
+	margin-right: 1px
+
+i
+	&.contact-icon
+		width: 16px
+		text-align: center
+		margin-right: 0.4em
+
+ul
+	list-style: square
+
+	ul
+		margin: 0
+
+li
+	line-height: 1.8
+
+dl
+	&.numbered
+		position: relative
+		padding: 0 0 0 5.5em
+		counter-reset: manifesto-counter
+		
+		dt
+			@extend h2
+			margin-top: 2em
+			color: $text_color
+
+			&:before
+				position: absolute
+				left: 0
+				margin-top: -4px
+				font-size: 3em
+				font-weight: normal
+				line-height: 1
+				vertical-align: top
+				color: $green
+				content: counter(manifesto-counter)
+				counter-increment: manifesto-counter
+
+
+		dd
+			line-height: 1.8
+			margin: $gd_padding/2 0 $gd_padding

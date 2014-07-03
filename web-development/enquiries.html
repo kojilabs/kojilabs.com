@@ -1,0 +1,67 @@
+<!-- $title Koji Labs Project Enquiries -->
+<!-- @include _header -->
+
+<section class="container content-box text-content">
+
+	<div class="six columns centered">
+		<h1>Project Enquiries</h1>
+		<p class="first">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.
+		</p>
+		<p class="required-tip">
+			Please complete all fields with an asterisk *
+		</p>
+		<form action="#" method="post">
+			<div class="field required">
+				<label for="name">What's your name?</label>
+				<input type="text" name="name" id="name" required>
+			</div>
+			<div class="field required">
+				<label for="company">Where do you work?</label>
+				<input type="text" name="company" id="company" required>
+			</div>
+			<div class="field required">
+				<label for="email">What's your email?</label>
+				<input type="email" name="email" id="email"  required>
+			</div>
+			<div class="field required">
+				<label for="phone">What's your phone number?</label>
+				<input type="tel" name="phone" id="phone" required>
+			</div>
+			<div class="field">
+				<label for="website">Do you already have a website?</label>
+				<input type="url" name="website" id="website">
+			</div>
+			<div class="field required">
+				<label for="budget">What's your budget?</label> <!-- TODO: Add Help Tip explaing why this is needed -->
+				<select name="budget" id="budget" required>
+					<option>Under £1500</option>
+					<option>£1500 - £5000</option>
+					<option>£5000 - £10,000</option>
+					<option>£10,000+</option>
+				</select>
+			</div>
+			<div class="field required">
+				<label for="timeframe">Do you have a deadline for the project?</label>
+				<select name="timeframe" id="timeframe" required>
+					<option>Yes! Within 3 months</option>
+					<option>3 - 6 months</option>
+					<option>6+ months</option>
+				</select>
+			</div>
+			<div class="field required">
+				<label for="details">Tell us about your project...</label>
+				<textarea name="details" id="details"></textarea>
+			</div>
+			<div class="field required">
+				<button type="submit" class="btn btn-success">Send</button>
+			</div>
+		</form>
+	</div>
+
+</section>
+
+<!-- @include _footer -->

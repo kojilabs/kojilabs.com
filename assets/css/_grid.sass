@@ -32,7 +32,8 @@ $gd-padding: 1.75em
   margin: 0 auto $gd_padding
   width: 100%
   max-width: $gd-container-width
-  box-shadow: 0 1px 3px rgba(0,0,0,0.03)
+  // border: 1px solid $border_color
+  outline: 1px solid $border_color // Use outline so that it looks okay with green fill
   // border-radius: 2px
 
 .column,
@@ -79,6 +80,18 @@ $gd-padding: 1.75em
   &.one
     width: $gd-column-width * 1
 
+  &.centered
+    margin: 0 auto
+    float: none
+    display: block
+    clear: both
+
+  &.pull-right
+    float: right
+
+  &.pull-left
+    float: left
+
 .row
   float: left
   display: block
@@ -91,12 +104,15 @@ $gd-padding: 1.75em
   padding-left: 0
   padding-right: 0
 
-
 /////////////////////////
 // Responsive goodness
 /////////////////////////
 
 @media screen and (min-width: 0px) and (max-width: 860px)
+
+  .container
+    margin: 0 auto $gd_padding/1.5
+    // outline: none
 
   .column,
   .columns

@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 	// @todo Use page visibility API here (if available)
 
+  $('.brand, .slogan').css('opacity', '0');
+
 	var canvasWidth = $('#home-feature').width();
 	var canvasHeight = $('#home-feature').height();
 

@@ -4,18 +4,21 @@ $orange: #cc8b25
 $blue: #1f86ab
 
 $text_color: #161616
+$text_grey: #a2a2a2
+$border_color: #ededed
 
 @import "_grid"
+@import "_typography"
 
 html
   height: 100%
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif
   text-rendering: optimizelegibility
   -webkit-font-smoothing: antialiased
 
 body
-  background: #F7F7F7
+  background: #F2F2F2
   color: $text_color
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif
 
 a,
 a:visited
@@ -27,14 +30,38 @@ a:visited
   &:focus
     color: $green
 
+img
+  width: 100%
+
 .content-box
   background: #FFF
   position: relative
+
+.text-content
+  padding-top: 10em
+  padding-bottom: 10em
+
+.extra-vert-padding
+  padding-top: 4em
+  padding-bottom: 4em
+
+.img-block
+  padding-top: 4em
+  padding-bottom: 4em
+
+  figcaption
+    margin: $gd_padding auto 0
+    max-width: 80%
+    text-align: center
+    color: #BCBCBC
+    font-size: 0.9em
+    line-height: 1.6
 
 header
   background: #FFF
   height: 80px
   overflow: hidden
+  border-top: 0 !important
   
   .logo
     float: left
@@ -42,24 +69,32 @@ header
     a,
     a:visited
       display: block
-      background: $purple
+      background-color: $purple
       height: 80px
       width: 80px
+      transition: background-color 200ms ease-in-out
+
+      &:hover,
+      &:focus
+        background-color: $green
+
+      img
+        width: 80px
+        height: 80px
 
   .contact
-    float: right
-    text-decoration: none
-    font-weight: bold
-    text-transform: uppercase
-    font-size: 0.7em
-    padding: 3em 2em
-    letter-spacing: 0.25px
 
     a,
     a:visited
       display: inline-block
       margin-left: $gd_padding
       color: $text_color
+      text-decoration: none
+      font-weight: bold
+      text-transform: uppercase
+      font-size: 0.7em
+      padding: 3em 0
+      letter-spacing: 0.5px
 
       i
         margin-right: 0.4em
@@ -84,11 +119,12 @@ header
         a:visited
           display: inline-block
           padding: 3em 2em
+          line-height: 1.2
           color: $text_color
           text-decoration: none
           font-weight: bold
           text-transform: uppercase
-          letter-spacing: 0.25px
+          letter-spacing: 0.5px
           font-size: 0.7em
           position: relative
           z-index: 999
@@ -99,9 +135,12 @@ header
             background: #161616
             color: #FFF
 
-          .plus
-            position: relative
-            top: -1.5px
+          &.current
+            color: $purple
+
+          // .plus
+          //   position: relative
+          //   top: -0.5px
 
         &:hover
           a,
@@ -112,7 +151,7 @@ header
         ul.sub-nav
           display: none
           position: absolute
-          top: 80px
+          top: 79px
           width: 250px
 
           &:hover
@@ -128,9 +167,13 @@ header
             display: block
             padding: 1.5em 2em
 
+            &.current
+              // color: $purple
+
             &:hover,
             &:focus
               background: $purple
+              color: #FFF
 
         a:hover,
         a:focus
@@ -141,39 +184,73 @@ header
 
 #home-feature
   height: 600px
+  border: 0 !important
 
+#home-projects,
+.portfolio-items
 
-#home-projects
-  .project
-    height: 285px
-    background-color: $purple
+  .project,
+  .portfolio-item
+    height: 250px
     padding-left: 0
     padding-right: 0
     position: relative
     overflow: hidden
-    border-left: 1px solid #F7F7F7
+    border-top: 1px solid $border_color
+    border-left: 1px solid $border_color
+    transition: background 200ms ease-in-out, border 200ms ease-in-out
 
-    &:first-child
-      border-left: 0
+    &.no-border
+      border-left: 0 !important
 
+    &.no-border-top
+      border-top: 0 !important
+
+    &:hover
+      background-color: $purple
+      border-color: transparent
 
     a,
     a:visited
       display: block
-      height: 285px
+      height: 250px
       color: $text_color
 
       &:hover,
       &:focus
         color: $text_color
 
-    img
+    .project-image
       width: 100%
+      height: 250px
       opacity: 1
       transition: opacity 200ms ease-in-out
+      background-repeat: no-repeat
+      background-position: 50% 50%
+
+      &.wlcome
+        height: 264px
+        background-image: url(../img/wlcome-logo.png)
+
+      &.lovehatefilms
+        // height: 216px
+        background-image: url(../img/lovehatefilms-logo.png)
+
+      &.idyia
+        // height: 234px
+        background-image: url(../img/idyia-logo.png)
+
+      &.pci
+        // height: 216px
+        background-image: url(../img/pci-logo.png)
+
+      &.johannagilbert
+        background-image: url(../img/johannagilbert-logo.png)
+
+      &.locarn
+        background-image: url(../img/locarn-logo.png)
 
     .project-info
-      background: #FFF
       padding: 1.4em $gd_padding
       position: absolute
       width: 100%
@@ -184,46 +261,34 @@ header
       .project-title
         font-weight: bold
         line-height: 1.6
+        color: #FFF
 
       .project-tech
-        color: #999
+        color: #FFF
         font-size: 0.9em
         transition: color 200ms ease-in-out
 
-        .plus
-          position: relative
-          top: -1.5px
-
-      // &:hover
-      //   background: $green
-      //   color: #FFF
-
-      //   .project-tech
-      //     color: #FFF
-
-
-
     &:hover
-      img
+      .project-image
         opacity: 0
 
-      .project-info
-        background: $purple
-        color: #FFF
+  .portfolio-item
+    border: 0
 
-        .project-tech
-          color: #FFF
-    //     top: 177px
+.portfolio-items
+  padding-top: $gd_padding
 
 #home-blog
   .post
-    min-height: 250px
+    min-height: 165px
     padding: $gd_padding
-    transition: background 200ms ease-in-out
-    border-left: 1px solid #F7F7F7
+    transition: background 200ms ease-in-out, border 200ms ease-in-out
+    border-top: 1px solid $border_color
+    border-left: 1px solid $border_color
+    // text-align: center
 
-    &:first-child
-      border-left: 0
+    &.no-border
+      border-left: 0 !important
 
     a,
     a:visited
@@ -236,14 +301,35 @@ header
         color: #FFF
 
     h3
-      font-size: 2.4em
+      font-size: 1.6em
+      margin: 0
       line-height: 1.25
-      font-weight: 800
+      font-weight: 600
 
-    .post-date
-      color: #999
-      margin-top: 1em
+    .post-info
       font-size: 0.9em
+      margin-top: 1.25em
+      color: $text_grey
+      transition: color 200ms ease-in-out
+
+      img
+        height: 24px
+        width: 24px
+        border-radius: 24px
+        vertical-align: middle
+      
+      div
+        display: inline
+        line-height: 24px
+        vertical-align: middle
+      
+      .post-author
+        margin-left: 0.5em
+        font-weight: bold
+        color: $green
+
+      .post-date
+        margin-left: 1px
 
     &:hover
       background: $purple
@@ -252,18 +338,31 @@ header
       h3
         color: #FFF
 
-      .post-date
+      .post-info,
+      .post-author
         color: #FFF
 
 
+#home-projects,
+#home-blog
+  h2
+    padding: $gd_padding/1.5 $gd_padding
+    font-size: 0.9em
+    font-weight: 600
+    line-height: 1
+    color: $text_grey
+    letter-spacing: 0.3px
+
 
 footer
-  padding: $gd_padding*2.5 $gd_padding*2 !important
+  padding: $gd_padding*2.5 $gd_padding*2 $gd_padding*1.5 !important
   background: #FFF
+  border-bottom: 0 !important
 
   h4
     text-transform: uppercase
-    font-size: 1.2em
+    font-size: 1.4em
+    line-height: 1
     font-weight: bold
     color: $green
 
@@ -278,7 +377,7 @@ footer
 
     &:hover,
     &:focus
-      color: $green
+      color: $purple
 
   .footer-links
     list-style: none
@@ -290,20 +389,27 @@ footer
       margin-right: 5px
       text-align: center
 
+  p
+    margin: 1em 0
+
   p,
   li
-    font-size: 0.9em
+    font-size: 0.95em
     line-height: 1.6
+
+    // &.footer-slogan
+    //   font-size: 1.1em
 
 
   .sub-text
-    font-size: 0.8em
+    font-size: 0.9em
     margin-top: $gd_padding
-    color: #666
+    color: $text_grey
 
     a,
     a:visited
-      color: #666
+      color: $text_grey
+      margin-left: $gd_padding
 
       &:hover,
       &:focus
@@ -311,6 +417,33 @@ footer
 
     p
       margin-bottom: 0
+
+
+
+@import "_form"
+
+
+/////////////////////////
+// Responsive goodness
+/////////////////////////
+
+@media screen and (min-width: 0px) and (max-width: 860px)
+  
+  header
+    nav
+      ul
+        li
+          ul.sub-nav
+            // top: 80px
+
+  #home-feature
+    height: 400px
+
+    .brand
+      font-size: 3.35em !important
+
+    .slogan
+      font-size: 1.4em !important
 
   
 
