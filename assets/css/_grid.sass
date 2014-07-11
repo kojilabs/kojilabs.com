@@ -101,18 +101,33 @@ $gd-padding: 1.75em
   @extend .clearfix
 
 .no-padding
-  padding-left: 0
-  padding-right: 0
+  padding-left: 0 !important
+  padding-right: 0 !important
+
+.no-padding-left
+  padding-left: 0 !important
+
+.no-padding-right
+  padding-right: 0 !important
 
 /////////////////////////
 // Responsive goodness
 /////////////////////////
 
+@media screen and (min-width: 0px) and (max-width: 1200px)
+  .container
+    margin: 0 auto $gd_padding/2
+
 @media screen and (min-width: 0px) and (max-width: 860px)
+  body
+    padding: 0 !important
 
   .container
-    margin: 0 auto $gd_padding/1.5
+    margin: 0 auto
     // outline: none
+
+  #home-feature
+    outline: none
 
   .column,
   .columns

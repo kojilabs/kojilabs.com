@@ -1,0 +1,94 @@
+.btn,
+.btn:visited,
+input.btn,
+button.btn
+	display: inline-block
+	padding: 1.3em $gd_padding
+	line-height: 1
+	text-align: center
+	background: transparent
+	font-size: 0.8em
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-weight: bold
+	border: 2px solid #999
+	color: #999
+	transition: background 200ms ease-in-out, color 200ms ease-in-out, border 200ms ease-in-out
+
+	&:hover,
+	&:focus
+		background: #999
+		color: #FFF
+
+	&:active
+		border-color: $text_color
+		background: $text_color
+
+	&.btn-info
+		border-color: $blue
+		color: $blue
+
+		&:hover,
+		&:focus
+			background: $blue
+			color: #FFF
+
+		&:active
+			border-color: $dark_blue
+			background: $dark_blue
+
+	&.btn-success
+		border-color: $green
+		color: $green
+
+		&:hover,
+		&:focus
+			background: $green
+			color: #FFF
+
+		&:active
+			background: $darker_green
+			border-color: $darker_green
+			color: #FFF
+
+	&.btn-warning
+		border-color: $red
+		color: $red
+
+		&:hover,
+		&:focus
+			background: $red
+			color: #FFF
+
+		&:active
+			border-color: $dark_red
+			background: $dark_red
+
+	&.btn-white
+		border-color: #FFF
+		color: #FFF
+
+		&:hover,
+		&:focus
+			background: #FFF
+			color: $green
+
+		&:active
+			border-color: #FFF
+			background: #FFF
+
+	&[disabled]
+		border-color: $border-color
+		color: $border-color
+		cursor: not-allowed
+		
+		&:hover,
+		&:focus,
+		&:active
+			border-color: $border-color
+			color: $border-color
+			background: transparent
+
+	&.btn-full-width
+		display: block
+		width: 100%

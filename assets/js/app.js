@@ -164,6 +164,127 @@ $(document).ready(function(){
   	delay: 14500
   }, 2000, 'ease');
 
+  $('.buttons').transition({
+    'opacity': 1,
+    delay: 15000
+  }, 2000, 'ease');
+
+
+  ////////////////////////////////
+  // Navigation
+  ////////////////////////////////
+
+  $('.nav-toggle a').click(function(e) {
+    e.preventDefault();
+
+    if ($('header nav').is(':visible')) {
+      $('header nav').slideUp();
+      $('.nav-toggle a').text('Menu');
+      $('.nav-toggle a').removeClass('active');
+    } else {
+      $('header nav').slideDown();
+      $('.nav-toggle a').text('Hide Menu');
+      $('.nav-toggle a').addClass('active');
+    }
+  });
+
+
+  ////////////////////////////////
+  // Forms
+  ////////////////////////////////
+
+  $('.tooltip').click(function(e) {
+    e.preventDefault();
+    
+    var tipID = $(this).attr('href');
+
+    if ($(tipID).is(':visible')) {
+      $(tipID).slideUp();
+    } else {
+      $(tipID).slideDown();
+    }
+  });
+
+
+  $('#contact-form').submit(function(e) {
+    e.preventDefault();
+
+    var form = $('#contact-form');
+
+    // Only do this it there is a form.
+    if (form) {
+      var formMessages = $('.form-messages');
+      var submitButton = $('#submit-button');
+      var originalSubmitText = $(submitButton).text();
+
+      $(form).submit(function(e) {
+        e.preventDefault();
+
+        // Check that all the fields have been completed.
+        if ($('#name').val() !== '' && 
+            $('#email').val() !== '' &&
+            $('#company').val() !== '' &&
+            $('#phone').val() !== '' &&
+            $('#details').val() !== '' &&
+            $('#budget').val() !== '' &&
+            $('#timeframe').val() !== '') {
+
+          var formData = $(form).serialize();
+
+          $(submitButton).text('Sending...');
+
+          // Submit the form using AJAX.
+          $.ajax({
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData
+          })
+          .done(function(response) {
+            // Make sure that the formMessages div has the 'success' class.
+            $(formMessages).removeClass('error');
+            $(formMessages).addClass('success');
+
+            // Set the message text.
+            $(formMessages).text(response);
+
+            // Reset the submit button.
+            $(submitButton).text(originalSubmitText);
+
+            // Clear the form.
+            $('#name').val('');
+            $('#phone').val('');
+            $('#email').val('');
+            $('#company').val('');
+            $('#budget').val('');
+            $('#timeframe').val('');
+            $('#website').val('');
+            $('#details').val('');
+          })
+          .fail(function(data) {
+            // Make sure that the formMessages div has the 'error' class.
+            $(formMessages).removeClass('success');
+            $(formMessages).addClass('error');
+
+            // Reset the submit button.
+            $(submitButton).text(originalSubmitText);
+
+            // Set the message text.
+            if (data.responseText !== '') {
+              $(formMessages).text(data.responseText);
+            } else {
+              $(formMessages).text('Oops! An error occured and your request could not be completed.');
+            }
+          });
+
+        } else {
+          $(formMessages).addClass('error');
+          $(formMessages).text('Oops! Looks like you missed out some important fields.');
+        }
+      });
+    }
+
+  });
+
 });
 
 

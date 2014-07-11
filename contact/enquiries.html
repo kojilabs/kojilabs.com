@@ -6,15 +6,16 @@
 	<div class="six columns centered">
 		<h1>Project Enquiries</h1>
 		<p class="first">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.
+			We'd love to work with you!
+		</p>
+		<p>
+			Please use the form below to tell us a little about you and your project. Once you're done, hit the send button and <a href="https://twitter.com/MattAntWest" target="_blank">Matt</a> will be in touch within the next working day.
 		</p>
 		<p class="required-tip">
-			Please complete all fields with an asterisk *
+			* Fields with an asterisk are super important, please fill them in.
 		</p>
-		<form action="#" method="post">
+		<form action="/mailers/contact-mailer.php" method="post" id="contact-form">
+			<div class="form-messages"></div>
 			<div class="field required">
 				<label for="name">What's your name?</label>
 				<input type="text" name="name" id="name" required>
@@ -36,10 +37,16 @@
 				<input type="url" name="website" id="website">
 			</div>
 			<div class="field required">
-				<label for="budget">What's your budget?</label> <!-- TODO: Add Help Tip explaing why this is needed -->
+				<label for="budget">
+					What's your budget? <a href="#budget-tip" class="tooltip">Why do we ask this?</a>
+				</label>
+				<div id="budget-tip" class="tip">
+					<p>Knowing this allows us to come up with solutions that are appropriate for your budget.</p>
+					<p>This <strong>is not</strong> about finding out how much money we can extract from your bank account. <i class="fa fa-smile-o"></i></p>
+				</div>
 				<select name="budget" id="budget" required>
-					<option>Under £1500</option>
-					<option>£1500 - £5000</option>
+					<option>Under £2500</option>
+					<option>£2500 - £5000</option>
 					<option>£5000 - £10,000</option>
 					<option>£10,000+</option>
 				</select>
@@ -56,8 +63,9 @@
 				<label for="details">Tell us about your project...</label>
 				<textarea name="details" id="details"></textarea>
 			</div>
-			<div class="field required">
-				<button type="submit" class="btn btn-success">Send</button>
+			<div class="field">
+				<div class="form-messages"></div>
+				<input type="submit" value="Send Enquiry" id="submit-button" class="btn btn-success btn-full-width">
 			</div>
 		</form>
 	</div>
