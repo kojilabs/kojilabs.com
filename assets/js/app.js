@@ -52,79 +52,71 @@ $(document).ready(function(){
     var form = $('#contact-form');
 
     // Only do this it there is a form.
-    if (form) {
-      var formMessages = $('.form-messages');
-      var submitButton = $('#submit-button');
-      var originalSubmitText = $(submitButton).text();
+    var formMessages = $('.form-messages');
+    var submitButton = $('#submit-button');
+    var originalSubmitText = $(submitButton).text();
 
-      $(form).submit(function(e) {
-        e.preventDefault();
+    // Check that all the fields have been completed.
+    if ($('#name').val() !== '' && 
+        $('#email').val() !== '' &&
+        $('#company').val() !== '' &&
+        $('#phone').val() !== '' &&
+        $('#details').val() !== '' &&
+        $('#budget').val() !== '' &&
+        $('#timeframe').val() !== '') {
 
-        // Check that all the fields have been completed.
-        if ($('#name').val() !== '' && 
-            $('#email').val() !== '' &&
-            $('#company').val() !== '' &&
-            $('#phone').val() !== '' &&
-            $('#details').val() !== '' &&
-            $('#budget').val() !== '' &&
-            $('#timeframe').val() !== '') {
+      var formData = $(form).serialize();
 
-          var formData = $(form).serialize();
+      $(submitButton).text('Sending...');
 
-          $(submitButton).text('Sending...');
+      // Submit the form using AJAX.
+      $.ajax({
+        type: 'POST',
+        url: $(form).attr('action'),
+        data: formData
+      })
+      .done(function(response) {
+        // Make sure that the formMessages div has the 'success' class.
+        $(formMessages).removeClass('error');
+        $(formMessages).addClass('success');
 
-          // Submit the form using AJAX.
-          $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-          })
-          .done(function(response) {
-            // Make sure that the formMessages div has the 'success' class.
-            $(formMessages).removeClass('error');
-            $(formMessages).addClass('success');
+        // Set the message text.
+        $(formMessages).text(response);
 
-            // Set the message text.
-            $(formMessages).text(response);
+        // Reset the submit button.
+        $(submitButton).text(originalSubmitText);
 
-            // Reset the submit button.
-            $(submitButton).text(originalSubmitText);
+        // Clear the form.
+        $('#name').val('');
+        $('#phone').val('');
+        $('#email').val('');
+        $('#company').val('');
+        $('#budget').val('');
+        $('#timeframe').val('');
+        $('#website').val('');
+        $('#details').val('');
+      })
+      .fail(function(data) {
+        // Make sure that the formMessages div has the 'error' class.
+        $(formMessages).removeClass('success');
+        $(formMessages).addClass('error');
 
-            // Clear the form.
-            $('#name').val('');
-            $('#phone').val('');
-            $('#email').val('');
-            $('#company').val('');
-            $('#budget').val('');
-            $('#timeframe').val('');
-            $('#website').val('');
-            $('#details').val('');
-          })
-          .fail(function(data) {
-            // Make sure that the formMessages div has the 'error' class.
-            $(formMessages).removeClass('success');
-            $(formMessages).addClass('error');
+        // Reset the submit button.
+        $(submitButton).text(originalSubmitText);
 
-            // Reset the submit button.
-            $(submitButton).text(originalSubmitText);
-
-            // Set the message text.
-            if (data.responseText !== '') {
-              $(formMessages).text(data.responseText);
-            } else {
-              $(formMessages).text('Oops! An error occured and your request could not be completed.');
-            }
-          });
-
+        // Set the message text.
+        if (data.responseText !== '') {
+          $(formMessages).text(data.responseText);
         } else {
-          $(formMessages).addClass('error');
-          $(formMessages).text('Oops! Looks like you missed out some important fields.');
+          $(formMessages).text('Oops! An error occured and your request could not be completed.');
         }
       });
+
+    } else {
+      $(formMessages).addClass('error');
+      $(formMessages).text('Oops! Looks like you missed out some important fields.');
     }
-
   });
-
 });
 
 
