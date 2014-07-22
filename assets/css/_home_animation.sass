@@ -1,6 +1,7 @@
 #home-feature
 	position: relative
 	overflow: hidden
+	background: $green
 
 	.ball
 		position: absolute
@@ -39,7 +40,8 @@
 	.brand
 		position: relative
 		z-index: 998
-		margin-top: 2.95em
+		// margin-top: 2.95em
+		margin-top: 2.65em
 		margin-bottom: 0
 		line-height: 1
 		font-size: 5em
@@ -47,7 +49,7 @@
 		text-align: center
 		text-transform: uppercase
 		color: #FFF
-		opacity: 0
+		// opacity: 0
 
 	.slogan
 		position: relative
@@ -57,4 +59,38 @@
 		margin-top: 0.5em
 		font-weight: 300
 		color: #FFF
-		opacity: 0
+		// opacity: 0
+
+	.home-buttons
+		position: relative
+		z-index: 998
+		text-align: center
+		margin-top: $gd_padding*1.5
+
+		a,
+		a:visited
+			margin: 0 1em
+	
+	.play-button
+		text-align: center
+		margin-top: 7em
+		position: relative
+		z-index: 998
+		
+		a,
+		a:visited
+			color: #FFF
+			
+			&:hover,
+			&:focus
+				font-weight: bold
+
+@media screen and (min-width: 0px) and (max-width: 860px)
+
+	#home-feature
+
+		.brand
+			margin-top: 2em
+
+		.play-button
+			margin-top: 4em

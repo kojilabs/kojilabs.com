@@ -87,6 +87,7 @@ form
     font-weight: normal
     line-height: 1.5
     margin: 1em 0
+    clear: both
 
     p
       margin: 1em 0
@@ -138,3 +139,8 @@ form
   input[type="submit"]
     @extend .btn
     @extend .btn-success
+
+@media screen and (min-width: 0px) and (max-width: 860px)
+  form
+    .tooltip span
+      display: none

@@ -1,5 +1,16 @@
 <!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) | !(IE 9)  ]><!-->
 <html>
+<!--<![endif]-->
 
 <head>
 
@@ -16,8 +27,25 @@
   
   <link href="<!-- @path favicon.ico -->" rel="shortcut icon">
   <link href="<!-- @path apple-touch-icon.png -->" rel="apple-touch-icon">
+
+  <!--[if lt IE 9]>
+    <!-- @javascript html5shiv.min -->
+    <!-- @stylesheet ie -->
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <style>
+    #home-feature .play-button {
+      display: none !important
+    }
+  </style>
+  <![endif]-->
   
   <title><!-- $title | Koji Labs --></title>
+
+  <noscript>
+    <!-- @stylesheet no-js -->
+  </noscript>
   
 </head>
 

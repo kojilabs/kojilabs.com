@@ -1,0 +1,68 @@
+.outdated-browser
+  display: none // Hide from most people.
+  padding: 15px
+  text-align: center
+  background: #CC0000
+  color: #FFF
+
+  a,
+  a:visited
+    color: #FFF
+    font-weight: bold
+
+html.ie7
+
+  body
+    min-width: 100%
+
+  $ie_7_col_width: 1000px / 12
+
+  .container
+    margin: 0 auto
+    width: 1000px
+
+  .column,
+  .columns
+    float: left
+    zoom: 1
+    display: inline
+    padding: 0 15px
+
+    &.twelve
+      width: floor($ie_7_col_width * 12) - 30px
+
+    &.eleven
+      width: floor($ie_7_col_width * 11) - 30px
+
+    &.ten
+      width: floor($ie_7_col_width * 10) - 30px
+
+    &.nine
+      width: floor($ie_7_col_width * 9) - 30px
+
+    &.eight
+      width: floor($ie_7_col_width * 8) - 30px
+
+    &.seven
+      width: floor($ie_7_col_width * 7) - 30px
+
+    &.six
+      width: floor($ie_7_col_width * 6) - 30px
+
+    &.five
+      width: floor($ie_7_col_width * 5) - 30px
+
+    &.four
+      width: floor($ie_7_col_width * 4) - 30px
+
+      &:nth-child(3)
+        width: floor($ie_7_col_width * 4) - 30px
+
+    &.three
+      width: floor($ie_7_col_width * 3) - 30px
+
+    &.two
+      width: floor($ie_7_col_width * 2) - 30px
+
+    &.one
+      width: floor($ie_7_col_width * 1) - 30px
