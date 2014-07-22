@@ -1,0 +1,19 @@
+/* humanstxt.org */
+
+Name:                   Matt West
+Site:                   http://kojilabs.com
+Twitter:                @MattAntWest
+Location:               UK
+
+/* SITE */
+
+Standards: 
+
+HTML5
+CSS3
+
+Components: 
+
+jQuery:                 http://jquery.com
+Font-Awesome:           http://fortawesome.github.io/Font-Awesome/
+TypeKit:                https://typekit.com

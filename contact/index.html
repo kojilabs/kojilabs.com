@@ -1,21 +1,22 @@
 <!-- $title Contact Koji Labs -->
+<!-- $description Get in touch via email, twitter, or post. -->
 <!-- @include _header -->
 
 <section class="container content-box text-content">
 
-	<div class="six columns centered">
+	<div class="six columns centered" itemscope itemtype="http://schema.org/LocalBusiness" itemref="data-name data-email data-logo data-description data-url">
 		<h1>Contact</h1>
-		<p class="six columns pull-left no-padding">
-			<strong>Harborough Innovation Centre</strong><br>
-			Airfield Business Park<br>
-			Market Harborough<br>
-			Leicestershire, LE16 7WB<br>
-			ENGLAND
+		<p class="six columns pull-left no-padding" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="streetAddress"><strong>Harborough Innovation Centre</strong><br>
+			Airfield Business Park</span><br>
+			<span itemprop="addressLocality">Market Harborough</span><br>
+			<span itemprop="addressRegion">Leicestershire</span>, <span itemprop="postalCode">LE16 7WB</span><br>
+			<span itemprop="addressCountry">ENGLAND</span>
 		</p>
 		<p class="five columns pull-right no-padding">
-			<i class="fa fa-twitter contact-icon"></i> <a href="mailto:hello@kojilabs.com">Say hello on twitter</a><br>
-			<i class="fa fa-send-o contact-icon"></i> <a href="https://twitter.com/KojiLabs" target="_blank">Write us an email</a><br><br>
-			<!-- <i class="fa fa-phone contact-icon"></i> <a href="tel:441858414200">+44 (0)1858 414200</a> --><!-- @todo Confirm telephone number -->
+			<i class="fa fa-twitter contact-icon"></i> <a href="https://twitter.com/KojiLabs" target="_blank">Say hello on twitter</a><br>
+			<i class="fa fa-send-o contact-icon"></i> <a href="mailto:hello@kojilabs.com">Write us an email</a><br><br>
+			<!-- <i class="fa fa-phone contact-icon"></i> <a href="tel:441858414200"><span itemprop="telephone">+44 (0)1858 414200</span></a> -->
 		</p>
 		<p class="twelve columns no-padding">
 			<a href="<!-- @path contact/enquiries.html -->" class="btn btn-success">Enquire about a Project</a>

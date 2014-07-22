@@ -392,7 +392,7 @@ function loadFeed() {
             var eleClass = '';
           }
 
-          var postHtml = '<article class="post home four columns ' + eleClass + '"><a href="' + e.link + '" target="_blank"><h3>' + e.title + '</h3><div class="post-info"><img src="http://mattwest.io/assets/img/matt-west.jpg" alt="Matt West" width="24" height="24"><div class="post-author">Matt West</div><div class="post-date"> wrote this on ' + date.getDay() + '<sup>' + ord(date.getDay()) + '</sup> ' + month(date.getMonth()) + '</div></div></a></article>';
+          var postHtml = '<article class="post home four columns ' + eleClass + '"><a href="' + e.link + '" target="_blank"><h3>' + e.title + '</h3><div class="post-info"><img src="/assets/img/matt-west.jpg" alt="Matt West" width="24" height="24"><div class="post-author">Matt West</div><div class="post-date"> wrote this on ' + date.getDay() + '<sup>' + ord(date.getDay()) + '</sup> ' + month(date.getMonth()) + '</div></div></a></article>';
 
           $('#home-blog').append(postHtml);
         });
