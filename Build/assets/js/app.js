@@ -116,9 +116,7 @@ $(document).ready(function(){
       $(formMessages).addClass('error');
       $(formMessages).text('Oops! Looks like you missed out some important fields.');
     }
-
   });
-
 });
 
 
