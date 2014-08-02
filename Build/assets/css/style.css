@@ -963,7 +963,7 @@ button.btn {
     button.btn.btn-white:hover,
     button.btn.btn-white:focus {
       background: white;
-      color: #1fab26; }
+      color: #161616; }
     .btn.btn-white:active, form input.btn-white[type="submit"]:active,
     .btn:visited.btn-white:active,
     form input[type="submit"]:visited.btn-white:active,
@@ -1159,7 +1159,10 @@ button.btn {
 #home-feature {
   position: relative;
   overflow: hidden;
-  background: #1fab26; }
+  background: url(/assets/img/feature-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
   #home-feature .ball {
     position: absolute;
     z-index: 997;
