@@ -3,6 +3,8 @@ $(document).ready(function(){
   
   $('.play-button a').click(function(e) {
     e.preventDefault();
+
+    ga('send', 'event', 'Animations', 'Play', 'Home animation');
     runHomeAnimation();
   });
 
@@ -28,6 +30,37 @@ $(document).ready(function(){
   if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
     loadFeed();
   }
+
+
+  ////////////////////////////////
+  // Event Tracking
+  ////////////////////////////////
+
+  $('.hire-btn').click(function(e) {
+    ga('send', 'event', 'Buttons', 'Click', 'Hire us');
+  });
+
+  $('.twitter-btn').click(function(e) {
+    ga('send', 'event', 'Buttons', 'Click', 'Twitter');
+  });
+
+  $('.linkedin-btn').click(function(e) {
+    ga('send', 'event', 'Buttons', 'Click', 'LinkedIn');
+  });
+
+  $('.facebook-btn').click(function(e) {
+    ga('send', 'event', 'Buttons', 'Click', 'Facebook');
+  });
+
+  $('.newsletter-btn').click(function(e) {
+    ga('send', 'event', 'Buttons', 'Click', 'Newsletter');
+  });
+
+  $('.portfolio-website-link').click(function(e) {
+    alert($(e).text());
+    // ga('send', 'event', 'Buttons', 'Click', );
+  });
+
 
   ////////////////////////////////
   // Forms
@@ -95,6 +128,8 @@ $(document).ready(function(){
         $('#timeframe').val('');
         $('#website').val('');
         $('#details').val('');
+
+        ga('send', 'event', 'Forms', 'Submit', 'Enquiries');
       })
       .fail(function(data) {
         // Make sure that the formMessages div has the 'error' class.
