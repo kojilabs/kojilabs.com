@@ -74,7 +74,7 @@ header
   height: 80px
   overflow: hidden
   border-top: 0 !important
-  
+
   .logo
     float: left
 
@@ -163,7 +163,7 @@ header
           a:visited
             background: #161616
             color: #FFF
-        
+
         ul.sub-nav
           display: none
           position: absolute
@@ -195,7 +195,7 @@ header
         a:focus
           &+ul.sub-nav
             display: block
-      
+
 
 
 #home-feature
@@ -269,6 +269,9 @@ header
       &.kojitsu
         background-image: url(../img/kojitsu-logo.png)
 
+      &.html5-foundations
+        background-image: url(../img/html5foundations_cover_thumb.png)
+
     .project-info
       padding: 1.4em $gd_padding
       position: absolute
@@ -297,7 +300,8 @@ header
 .portfolio-items
   padding-top: $gd_padding
 
-#home-blog
+#home-blog,
+#home-code-blog
   .post
     min-height: 165px
     padding: $gd_padding
@@ -336,12 +340,12 @@ header
         width: 24px
         border-radius: 24px
         vertical-align: middle
-      
+
       div
         display: inline
         line-height: 24px
         vertical-align: middle
-      
+
       .post-author
         margin-left: 0.5em
         font-weight: bold
@@ -363,7 +367,8 @@ header
 
 
 #home-projects,
-#home-blog
+#home-blog,
+#home-code-blog
   h2
     padding: $gd_padding/1.5 $gd_padding
     font-size: 0.9em
@@ -411,6 +416,7 @@ table.project-info
 
 footer
   padding: $gd_padding*2.5 $gd_padding*2 $gd_padding*1.5 !important
+  margin-bottom: 0 !important
   background: #FFF
   border-bottom: 0 !important
 
@@ -484,10 +490,10 @@ footer
 /////////////////////////
 
 @media screen and (min-width: 0px) and (max-width: 1100px)
-  header 
-    .contact 
+  header
+    .contact
       a,
-      a:visited  
+      a:visited
         i
           font-size: 1.2em
 
@@ -500,17 +506,18 @@ footer
           i
             color: $green
 
-  #home-blog
+  #home-blog,
+  #home-code-blog
     .post
       min-height: 195px
 
-@media screen and (min-width: 0px) and (max-width: 860px)
+@media screen and (min-width: 0px) and (max-width: 910px)
   header
     height: auto
 
     .contact
       display: none
-  
+
     nav
       ul
         li
@@ -539,7 +546,7 @@ footer
       a:visited
         margin-left: 0
 
-@media screen and (min-width: 0px) and (max-width: 760px)  
+@media screen and (min-width: 0px) and (max-width: 910px)
   header
     .logo
       width: 25%
@@ -638,6 +645,10 @@ footer
   p,
   li
     line-height: 1.7
+
+  #home-blog .post,
+  #home-code-blog .post
+    min-height: 0
 
 
 @media screen and (min-width: 0px) and (max-width: 860px)

@@ -1,10 +1,13 @@
 $(document).ready(function(){
+  'use strict';
 
-  
+  $('#home-feature').prepend('<div class="ball one"></div><div class="ball two"></div><div class="ball three"></div><div class="ball four"></div>');
+  $('#home-feature').append('<div class="play-button"><a href="#">(surprise me)</a></div>');
+
   $('.play-button a').click(function(e) {
     e.preventDefault();
 
-    ga('send', 'event', 'Animations', 'Play', 'Home animation');
+    // ga('send', 'event', 'Animations', 'Play', 'Home animation');
     runHomeAnimation();
   });
 
@@ -27,8 +30,9 @@ $(document).ready(function(){
   });
 
   // Load the blog feed if this is the home page
-  if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
-    loadFeed();
+  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    loadFeed('#home-blog', 'http://blog.kojilabs.com/rss');
+    loadFeed('#home-code-blog', 'http://code.kojilabs.com/feed.xml');
   }
 
 
@@ -57,8 +61,7 @@ $(document).ready(function(){
   });
 
   $('.portfolio-website-link').click(function(e) {
-    alert($(e).text());
-    // ga('send', 'event', 'Buttons', 'Click', );
+    ga('send', 'event', 'Buttons', 'Click', 'Portfolio Website Link');
   });
 
 
@@ -68,7 +71,7 @@ $(document).ready(function(){
 
   $('.tooltip').click(function(e) {
     e.preventDefault();
-    
+
     var tipID = $(this).attr('href');
 
     if ($(tipID).is(':visible')) {
@@ -90,7 +93,7 @@ $(document).ready(function(){
     var originalSubmitText = $(submitButton).text();
 
     // Check that all the fields have been completed.
-    if ($('#name').val() !== '' && 
+    if ($('#name').val() !== '' &&
         $('#email').val() !== '' &&
         $('#company').val() !== '' &&
         $('#phone').val() !== '' &&
@@ -156,6 +159,8 @@ $(document).ready(function(){
 
 
 function keyFrameOne(ele, height, width, duration, delay) {
+  'use strict';
+
 	$(ele).transition({
 		height: height + 10 + 'px',
 		width: height + 10 + 'px',
@@ -172,7 +177,9 @@ function keyFrameOne(ele, height, width, duration, delay) {
 }
 
 function keyFrameTwo(ele, height, width, x, y) {
-	$(ele).css({ 
+  'use strict';
+
+	$(ele).css({
   	transformOrigin: '50% 50%'
   }).transition({
 		height: height + 'px',
@@ -185,6 +192,8 @@ function keyFrameTwo(ele, height, width, x, y) {
 }
 
 function runHomeAnimation() {
+  'use strict';
+
   $('#home-feature').css('background', '#FFFFFF');
   $('.brand, .slogan, .home-buttons, .play-button').css('opacity', '0');
   $('.brand').css('margin-top', '2.95em');
@@ -211,76 +220,76 @@ function runHomeAnimation() {
 
 
   // Spin (4000 - )
-  $('.ball.one').css({ 
-    transformOrigin: (ballSize/2 + spacing) +'px ' + (ballSize/2) + 'px' 
+  $('.ball.one').css({
+    transformOrigin: (ballSize/2 + spacing) +'px ' + (ballSize/2) + 'px'
   }).transition({ rotate: '630deg', delay: 100 }, 7000/1.5, 'linear');
 
-  $('.ball.two').css({ 
-    transformOrigin: (ballSize/2) +'px ' + (ballSize/2 + spacing) + 'px' 
+  $('.ball.two').css({
+    transformOrigin: (ballSize/2) +'px ' + (ballSize/2 + spacing) + 'px'
   }).transition({ rotate: '540deg', delay: 500 }, 6000/1.5, 'linear');
 
-  $('.ball.three').css({ 
-    transformOrigin: '-' + (spacing - (ballSize/2)) +'px ' + (ballSize/2) + 'px' 
+  $('.ball.three').css({
+    transformOrigin: '-' + (spacing - (ballSize/2)) +'px ' + (ballSize/2) + 'px'
   }).transition({ rotate: '630deg', delay: 1000 }, 7000/1.5, 'linear');
 
-  $('.ball.four').css({ 
-    transformOrigin: (ballSize/2) +'px ' + '-' + (spacing - (ballSize/2)) + 'px' 
+  $('.ball.four').css({
+    transformOrigin: (ballSize/2) +'px ' + '-' + (spacing - (ballSize/2)) + 'px'
   }).transition({ rotate: '540deg', delay: 0 }, 6000/1.5, 'linear');
 
 
   // Fall out ()
-  $('.ball.four').transition({ 
+  $('.ball.four').transition({
     transformOrigin: '0 0',
     rotate: '0deg',
     top: canvasHeight/2 - spacing + 'px'
   }, 0);
 
-  $('.ball.four').transition({ 
+  $('.ball.four').transition({
     'top': '50%',
     'left': canvasWidth/2 + ballSize*1.5 + spacing + 'px'
   }, 1000, 'linear');
 
 
-  $('.ball.three').transition({ 
+  $('.ball.three').transition({
     transformOrigin: '0 0',
     rotate: '0deg',
     top: canvasHeight/2 - spacing + 'px',
     left: '50%'
   }, 0);
 
-  $('.ball.three').transition({ 
+  $('.ball.three').transition({
     'top': '50%',
     'left': canvasWidth/2 + spacing - ballSize/2 + 'px'
   }, 750, 'linear');
 
 
-  $('.ball.two').transition({ 
+  $('.ball.two').transition({
     transformOrigin: '0 0',
     rotate: '0deg',
     top: canvasHeight/2 + spacing + 'px',
     left: '50%'
   }, 0);
 
-  $('.ball.two').transition({ 
+  $('.ball.two').transition({
     'top': '50%',
     'left': canvasWidth/2 - ballSize*1.5 - spacing + 'px'
   }, 1000, 'linear');
 
-  $('.ball.one').transition({ 
+  $('.ball.one').transition({
     transformOrigin: '0 0',
     rotate: '0deg',
     top: canvasHeight/2 + spacing + 'px',
     left: '50%'
   }, 0);
 
-  $('.ball.one').transition({ 
+  $('.ball.one').transition({
     'top': '50%',
     'left': canvasWidth/2 - spacing + ballSize/2 + 'px'
   }, 750, 'linear');
 
 
   // Refine ()
-  $('.ball.one').transition({ 
+  $('.ball.one').transition({
     'height': '100px',
     'width': '100px',
     'margin-top': '-50px',
@@ -289,7 +298,7 @@ function runHomeAnimation() {
   }, 550, 'cubic-bezier(.37,.13,.96,.25)');
   $('.ball.one').transition({ 'display': 'none' }, 0);
 
-  $('.ball.two').transition({ 
+  $('.ball.two').transition({
     'height': '0',
     'width': '0',
     'margin-top': '0',
@@ -299,8 +308,8 @@ function runHomeAnimation() {
   $('.ball.two').transition({ 'display': 'none' }, 0);
 
 
-  $('.ball.four').transition({ 
-    'top': '-=15px', 
+  $('.ball.four').transition({
+    'top': '-=15px',
     delay: 1500
   }, 300, 'in-out').transition({
     'top': '120%',
@@ -312,14 +321,14 @@ function runHomeAnimation() {
 
 
   // Simplify ()
-  $('.ball.three').transition({ 
+  $('.ball.three').transition({
     'top': '50%',
     'left': '50%',
     delay: 1500
   }, 1000, 'linear');
 
   // Grow ()
-  $('.ball.three').transition({ 
+  $('.ball.three').transition({
     'height': '3000px',
     'width': '3000px',
     'margin-top': '-1500px',
@@ -329,7 +338,7 @@ function runHomeAnimation() {
     delay: 300
   }, 2000, 'linear');
 
-  $('.ball.three').transition({ 
+  $('.ball.three').transition({
     'height': '100%',
     'width': '100%',
     'top': '0',
@@ -374,36 +383,42 @@ function runHomeAnimation() {
 }
 
 function ord(d) {
-  if(d>3 && d<21) return 'th';
+  'use strict';
+
+  if (d>3 && d<21) {
+    return 'th';
+  }
 
   switch (d % 10) {
-    case 1:  return "st";
-    case 2:  return "nd";
-    case 3:  return "rd";
-    default: return "th";
+    case 1:  return 'st';
+    case 2:  return 'nd';
+    case 3:  return 'rd';
+    default: return 'th';
   }
-} 
+}
 
 function month(i) {
+  "use strict";
+
   switch (i) {
-    case 0:  return "January";
-    case 1:  return "February";
-    case 2:  return "March";
-    case 3:  return "April";
-    case 4:  return "May";
-    case 5:  return "June";
-    case 6:  return "July";
-    case 7:  return "August";
-    case 8:  return "September";
-    case 9:  return "October";
-    case 10:  return "November";
-    case 11:  return "December";
+    case 0:  return 'January';
+    case 1:  return 'February';
+    case 2:  return 'March';
+    case 3:  return 'April';
+    case 4:  return 'May';
+    case 5:  return 'June';
+    case 6:  return 'July';
+    case 7:  return 'August';
+    case 8:  return 'September';
+    case 9:  return 'October';
+    case 10:  return 'November';
+    case 11:  return 'December';
   }
 }
 
 
-function loadFeed() {
-  var feedUrl = "http://blog.kojilabs.com/feed";
+function loadFeed(selector, feedUrl) {
+  'use strict';
 
   $.ajax({
     url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=3&callback=?&q=' + encodeURIComponent(feedUrl),
@@ -412,16 +427,17 @@ function loadFeed() {
       if (data.responseData.feed && data.responseData.feed.entries) {
         $.each(data.responseData.feed.entries, function (i, e) {
           var date = new Date(e.publishedDate);
+          var eleClass;
 
-          if (i == 0) {
-            var eleClass = 'no-border';
+          if (i === 0) {
+            eleClass = 'no-border';
           } else {
-            var eleClass = '';
+            eleClass = '';
           }
 
-          var postHtml = '<article class="post home four columns ' + eleClass + '"><a href="' + e.link + '" target="_blank"><h3>' + e.title + '</h3><div class="post-info"><img src="/assets/img/matt-west.jpg" alt="Matt West" width="24" height="24"><div class="post-author">Matt West</div><div class="post-date"> wrote this on ' + date.getDay() + '<sup>' + ord(date.getDay()) + '</sup> ' + month(date.getMonth()) + '</div></div></a></article>';
+          var postHtml = '<article class="post home four columns ' + eleClass + '"><a href="' + e.link + '" target="_blank"><h3>' + e.title + '</h3><div class="post-info"><img src="/assets/img/matt-west-mini.jpg" alt="Matt West" width="24" height="24"><div class="post-author">Matt West</div><div class="post-date"> wrote this on ' + date.getDay() + '<sup>' + ord(date.getDay()) + '</sup> ' + month(date.getMonth()) + '</div></div></a></article>';
 
-          $('#home-blog').append(postHtml);
+          $(selector).append(postHtml);
         });
       }
     }

@@ -103,7 +103,7 @@
 @media screen and (min-width: 0px) and (max-width: 1200px) {
   .container {
     margin: 0 auto 0.875em; } }
-@media screen and (min-width: 0px) and (max-width: 860px) {
+@media screen and (min-width: 0px) and (max-width: 910px) {
   body {
     padding: 0 !important; }
 
@@ -475,6 +475,11 @@ header {
     .portfolio-items .project .project-image.kojitsu,
     .portfolio-items .portfolio-item .project-image.kojitsu {
       background-image: url(../img/kojitsu-logo.png); }
+    #home-projects .project .project-image.html5-foundations,
+    #home-projects .portfolio-item .project-image.html5-foundations,
+    .portfolio-items .project .project-image.html5-foundations,
+    .portfolio-items .portfolio-item .project-image.html5-foundations {
+      background-image: url(../img/html5foundations_cover_thumb.png); }
   #home-projects .project .project-info,
   #home-projects .portfolio-item .project-info,
   .portfolio-items .project .project-info,
@@ -511,61 +516,82 @@ header {
 .portfolio-items {
   padding-top: 1.75em; }
 
-#home-blog .post {
+#home-blog .post,
+#home-code-blog .post {
   min-height: 165px;
   padding: 1.75em;
   transition: background 200ms ease-in-out, border 200ms ease-in-out;
   border-top: 1px solid #ededed;
   border-left: 1px solid #ededed; }
-  #home-blog .post.no-border {
+  #home-blog .post.no-border,
+  #home-code-blog .post.no-border {
     border-left: 0 !important; }
   #home-blog .post a,
-  #home-blog .post a:visited {
+  #home-blog .post a:visited,
+  #home-code-blog .post a,
+  #home-code-blog .post a:visited {
     display: block;
     color: #161616;
     transition: color 200ms ease-in-out; }
     #home-blog .post a:hover, #home-blog .post a:focus,
     #home-blog .post a:visited:hover,
-    #home-blog .post a:visited:focus {
+    #home-blog .post a:visited:focus,
+    #home-code-blog .post a:hover,
+    #home-code-blog .post a:focus,
+    #home-code-blog .post a:visited:hover,
+    #home-code-blog .post a:visited:focus {
       color: white; }
-  #home-blog .post h3 {
+  #home-blog .post h3,
+  #home-code-blog .post h3 {
     font-size: 1.6em;
     margin: 0;
     line-height: 1.25;
     font-weight: 600; }
-  #home-blog .post .post-info {
+  #home-blog .post .post-info,
+  #home-code-blog .post .post-info {
     font-size: 0.9em;
     margin-top: 1.25em;
     color: #a2a2a2;
     transition: color 200ms ease-in-out; }
-    #home-blog .post .post-info img {
+    #home-blog .post .post-info img,
+    #home-code-blog .post .post-info img {
       height: 24px;
       width: 24px;
       border-radius: 24px;
       vertical-align: middle; }
-    #home-blog .post .post-info div {
+    #home-blog .post .post-info div,
+    #home-code-blog .post .post-info div {
       display: inline;
       line-height: 24px;
       vertical-align: middle; }
-    #home-blog .post .post-info .post-author {
+    #home-blog .post .post-info .post-author,
+    #home-code-blog .post .post-info .post-author {
       margin-left: 0.5em;
       font-weight: bold;
       color: #1fab26; }
-    #home-blog .post .post-info .post-date {
+    #home-blog .post .post-info .post-date,
+    #home-code-blog .post .post-info .post-date {
       margin-left: 1px; }
-  #home-blog .post:hover {
+  #home-blog .post:hover,
+  #home-code-blog .post:hover {
     background: #811fab;
     border-color: transparent; }
-    #home-blog .post:hover h3 {
+    #home-blog .post:hover h3,
+    #home-code-blog .post:hover h3 {
       color: white; }
     #home-blog .post:hover .post-info,
-    #home-blog .post:hover .post-author {
+    #home-blog .post:hover .post-author,
+    #home-code-blog .post:hover .post-info,
+    #home-code-blog .post:hover .post-author {
       color: white; }
 
 #home-projects h2, #home-projects dl.numbered dt, dl.numbered #home-projects dt,
 #home-blog h2,
 #home-blog dl.numbered dt,
-dl.numbered #home-blog dt {
+dl.numbered #home-blog dt,
+#home-code-blog h2,
+#home-code-blog dl.numbered dt,
+dl.numbered #home-code-blog dt {
   padding: 1.16667em 1.75em;
   font-size: 0.9em;
   font-weight: 600;
@@ -575,7 +601,10 @@ dl.numbered #home-blog dt {
   #home-projects h2 i, #home-projects dl.numbered dt i, dl.numbered #home-projects dt i,
   #home-blog h2 i,
   #home-blog dl.numbered dt i,
-  dl.numbered #home-blog dt i {
+  dl.numbered #home-blog dt i,
+  #home-code-blog h2 i,
+  #home-code-blog dl.numbered dt i,
+  dl.numbered #home-code-blog dt i {
     vertical-align: middle;
     margin-left: 0.2em;
     color: #d9d9d9; }
@@ -588,7 +617,13 @@ dl.numbered #home-blog dt {
   dl.numbered #home-blog dt a,
   #home-blog h2 a:visited,
   #home-blog dl.numbered dt a:visited,
-  dl.numbered #home-blog dt a:visited {
+  dl.numbered #home-blog dt a:visited,
+  #home-code-blog h2 a,
+  #home-code-blog dl.numbered dt a,
+  dl.numbered #home-code-blog dt a,
+  #home-code-blog h2 a:visited,
+  #home-code-blog dl.numbered dt a:visited,
+  dl.numbered #home-code-blog dt a:visited {
     color: #a2a2a2; }
     #home-projects h2 a:hover, #home-projects dl.numbered dt a:hover, dl.numbered #home-projects dt a:hover, #home-projects h2 a:focus, #home-projects dl.numbered dt a:focus, dl.numbered #home-projects dt a:focus,
     #home-projects h2 a:visited:hover,
@@ -608,7 +643,19 @@ dl.numbered #home-blog dt {
     dl.numbered #home-blog dt a:visited:hover,
     #home-blog h2 a:visited:focus,
     #home-blog dl.numbered dt a:visited:focus,
-    dl.numbered #home-blog dt a:visited:focus {
+    dl.numbered #home-blog dt a:visited:focus,
+    #home-code-blog h2 a:hover,
+    #home-code-blog dl.numbered dt a:hover,
+    dl.numbered #home-code-blog dt a:hover,
+    #home-code-blog h2 a:focus,
+    #home-code-blog dl.numbered dt a:focus,
+    dl.numbered #home-code-blog dt a:focus,
+    #home-code-blog h2 a:visited:hover,
+    #home-code-blog dl.numbered dt a:visited:hover,
+    dl.numbered #home-code-blog dt a:visited:hover,
+    #home-code-blog h2 a:visited:focus,
+    #home-code-blog dl.numbered dt a:visited:focus,
+    dl.numbered #home-code-blog dt a:visited:focus {
       color: #1fab26; }
       #home-projects h2 a:hover i, #home-projects dl.numbered dt a:hover i, dl.numbered #home-projects dt a:hover i, #home-projects h2 a:focus i, #home-projects dl.numbered dt a:focus i, dl.numbered #home-projects dt a:focus i,
       #home-projects h2 a:visited:hover i,
@@ -628,7 +675,19 @@ dl.numbered #home-blog dt {
       dl.numbered #home-blog dt a:visited:hover i,
       #home-blog h2 a:visited:focus i,
       #home-blog dl.numbered dt a:visited:focus i,
-      dl.numbered #home-blog dt a:visited:focus i {
+      dl.numbered #home-blog dt a:visited:focus i,
+      #home-code-blog h2 a:hover i,
+      #home-code-blog dl.numbered dt a:hover i,
+      dl.numbered #home-code-blog dt a:hover i,
+      #home-code-blog h2 a:focus i,
+      #home-code-blog dl.numbered dt a:focus i,
+      dl.numbered #home-code-blog dt a:focus i,
+      #home-code-blog h2 a:visited:hover i,
+      #home-code-blog dl.numbered dt a:visited:hover i,
+      dl.numbered #home-code-blog dt a:visited:hover i,
+      #home-code-blog h2 a:visited:focus i,
+      #home-code-blog dl.numbered dt a:visited:focus i,
+      dl.numbered #home-code-blog dt a:visited:focus i {
         color: #1fab26; }
 
 table.project-info {
@@ -649,6 +708,7 @@ table.project-info {
 
 footer {
   padding: 4.375em 3.5em 2.625em !important;
+  margin-bottom: 0 !important;
   background: white;
   border-bottom: 0 !important; }
   footer h4 {
@@ -1040,9 +1100,10 @@ button.btn {
   header .contact a:visited:focus i {
     color: #1fab26; }
 
-  #home-blog .post {
+  #home-blog .post,
+  #home-code-blog .post {
     min-height: 195px; } }
-@media screen and (min-width: 0px) and (max-width: 860px) {
+@media screen and (min-width: 0px) and (max-width: 910px) {
   header {
     height: auto; }
     header .contact {
@@ -1064,7 +1125,7 @@ button.btn {
       footer .sub-text a,
       footer .sub-text a:visited {
         margin-left: 0; } }
-@media screen and (min-width: 0px) and (max-width: 760px) {
+@media screen and (min-width: 0px) and (max-width: 910px) {
   header .logo {
     width: 25%;
     text-align: center; }
@@ -1152,7 +1213,11 @@ button.btn {
 
   p,
   li {
-    line-height: 1.7; } }
+    line-height: 1.7; }
+
+  #home-blog .post,
+  #home-code-blog .post {
+    min-height: 0; } }
 @media screen and (min-width: 0px) and (max-width: 860px) {
   dl.numbered {
     padding: 0 0 0 4em; } }
@@ -1201,15 +1266,16 @@ button.btn {
     position: relative;
     z-index: 998;
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin-top: 0.5em;
     font-weight: 300;
-    color: white; }
+    color: white;
+    text-transform: none; }
   #home-feature .home-buttons {
     position: relative;
     z-index: 998;
     text-align: center;
-    margin-top: 2.625em; }
+    margin-top: 3.0625em; }
     #home-feature .home-buttons a,
     #home-feature .home-buttons a:visited {
       margin: 0 1em; }
@@ -1227,7 +1293,7 @@ button.btn {
       #home-feature .play-button a:visited:focus {
         font-weight: bold; }
 
-@media screen and (min-width: 0px) and (max-width: 860px) {
+@media screen and (min-width: 0px) and (max-width: 910px) {
   #home-feature .brand {
     margin-top: 2em; }
   #home-feature .play-button {
