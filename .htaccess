@@ -23,3 +23,23 @@ ExpiresByType application/javascript "access plus 1 month"
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]
+
+Redirect 301 /about/index.html /about/
+Redirect 301 /about/manifesto.html /about/manifesto/
+Redirect 301 /contact/index.html /contact/
+Redirect 301 /contact/enquiries.html /contact/enquiries/
+Redirect 301 /portfolio/index.html /portfolio/
+Redirect 301 /portfolio/idyia.html /portfolio/idyia/
+Redirect 301 /portfolio/johanna-gilbert.html /portfolio/johanna-gilbert/
+Redirect 301 /portfolio/locarn.html /portfolio/locarn/
+Redirect 301 /portfolio/love-hate-films.html /portfolio/love-hate-films/
+Redirect 301 /portfolio/pci-films-consulting.html /portfolio/pci-films-consulting/
+Redirect 301 /portfolio/wlcome.html /portfolio/wlcome/
+Redirect 301 /products/index.html /products/
+Redirect 301 /products/html5-foundations.html /products/html5-foundations/
+Redirect 301 /products/kojitsu.html /products/kojitsu/
+Redirect 301 /web-design/index.html /web-design/
+Redirect 301 /web-design/process.html /web-design/process/
+Redirect 301 /newsletter.html /newsletter/
+Redirect 301 /privacy.html /privacy/
+Redirect 301 /sitemap.html /sitemap/
