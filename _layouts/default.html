@@ -13,18 +13,8 @@
 <!--<![endif]-->
 
   {% include head.html %}
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
 
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
 </html>
