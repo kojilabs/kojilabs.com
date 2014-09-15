@@ -1,5 +1,8 @@
-<!-- $title PCI Films Consulting Website by Koji Labs -->
-<!-- @include _header -->
+---
+layout: default
+title: PCI Films Consulting Website by Koji Labs
+description:
+---
 
 <section class="container content-box text-content">
 
@@ -33,7 +36,7 @@
 	</div>
 
 	<figure class="eight columns img-block centered">
-		<img src="<!-- @path pci-home.png -->" alt="PCI Films Consulting Home Page">
+		<img src="{% asset_path portfolio/pci-home.png %}" alt="PCI Films Consulting Home Page">
 		<figcaption>
 			Home page on desktop
 		</figcaption>
@@ -47,21 +50,21 @@
 
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path pci-region.png -->" alt="PCI Films Consulting Region Page">
+		<img src="{% asset_path portfolio/pci-region.png %}" alt="PCI Films Consulting Region Page">
 		<figcaption>
 			Regional landing page on desktop
 		</figcaption>
 	</figure>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path pci-industry.png -->" alt="PCI Films Consulting Industry Page">
+		<img src="{% asset_path portfolio/pci-industry.png %}" alt="PCI Films Consulting Industry Page">
 		<figcaption>
 			Industry landing page on desktop
 		</figcaption>
 	</figure>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path pci-report.png -->" alt="PCI Films Consulting Report Page">
+		<img src="{% asset_path portfolio/pci-report.png %}" alt="PCI Films Consulting Report Page">
 		<figcaption>
 			Report page on desktop
 		</figcaption>
@@ -69,19 +72,19 @@
 
 	<div class="six columns centered">
 		<p>
-			We followed the principles of <a href="/web-design/process.html#responsive-web-design">responsive web design</a> to create a layout that automatically adapts to the size of the device the site is being viewed on.
+			We followed the principles of <a href="/web-design/process/#responsive-web-design">responsive web design</a> to create a layout that automatically adapts to the size of the device the site is being viewed on.
 		</p>
 	</div>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path pci-mobile.png -->" alt="PCI Films Consulting Webite on Mobile">
+		<img src="{% asset_path portfolio/pci-mobile.png %}" alt="PCI Films Consulting Webite on Mobile">
 		<figcaption>
 			Report page on mobile
 		</figcaption>
 	</figure>
 
 	<figure class="eight columns img-block">
-		<img src="<!-- @path pci-tablet.png -->" alt="PCI Films Consulting Webite on Tabler">
+		<img src="{% asset_path portfolio/pci-tablet.png %}" alt="PCI Films Consulting Webite on Tablet">
 		<figcaption>
 			Report page on tablet
 		</figcaption>
@@ -96,10 +99,8 @@
 	<div class="six columns centered">
 		<p>
 			<a href="http://pcifilms.com" class="btn btn-info btn-pad-right portfolio-website-link" target="_blank">View pcifilms.com</a>
-			<a href="<!-- @path contact/enquiries.html -->" class="btn btn-success hire-btn">Hire us!</a>
+			<a href="/contact/enquiries/" class="btn btn-success hire-btn">Hire us!</a>
 		</p>
 	</div>
 
 </section>
-
-<!-- @include _footer -->

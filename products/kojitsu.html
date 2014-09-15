@@ -1,6 +1,8 @@
-<!-- $title Kojitsu by Koji Labs -->
-<!-- $description A content discovery service by Koji Labs. -->
-<!-- @include _header -->
+---
+layout: default
+title: Kojitsu by Koji Labs
+description: A content discovery service by Koji Labs.
+---
 
 <section class="container content-box text-content">
 
@@ -14,7 +16,7 @@
 		</p>
 	</div>
 	<figure class="eight columns centered img-block">
-		<img src="/assets/img/kojitsu-email.png" alt="Kojitsu Daily Email">
+		<img src="{% asset_path kojitsu-email.png %}" alt="Kojitsu Daily Email">
 		<figcaption>
 			Kojitsu delivered recommendations using a daily email.
 		</figcaption>
@@ -25,7 +27,7 @@
 		</p>
 	</div>
 	<figure class="eight columns centered img-block">
-		<img src="/assets/img/kojitsu-web.png" alt="Kojitsu Web Application">
+		<img src="{% asset_path kojitsu-web.png %}" alt="Kojitsu Web Application">
 		<figcaption>
 			The Kojitsu web application allowed users to view on-demand recommendations and manage their account preferences.
 		</figcaption>
@@ -40,5 +42,3 @@
 	</div>
 
 </section>
-
-<!-- @include _footer -->

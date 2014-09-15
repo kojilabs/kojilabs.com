@@ -1,5 +1,8 @@
-<!-- $title Love Hate Films Website and Branding by Koji Labs -->
-<!-- @include _header -->
+---
+layout: default
+title: Love Hate Films Website and Branding by Koji Labs
+description:
+---
 
 <section class="container content-box text-content">
 
@@ -33,21 +36,21 @@
 	</div>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path love-hate-films-home.png -->" alt="Love Hate Films Home Page">
+		<img src="{% asset_path portfolio/love-hate-films-home.png %}" alt="Love Hate Films Home Page">
 		<figcaption>
 			Home page on desktop
 		</figcaption>
 	</figure>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path love-hate-films-profile.png -->" alt="Love Hate Films User Profile">
+		<img src="{% asset_path portfolio/love-hate-films-profile.png %}" alt="Love Hate Films User Profile">
 		<figcaption>
 			User profile on desktop
 		</figcaption>
 	</figure>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path love-hate-films-film.png -->" alt="Love Hate Films Film Page">
+		<img src="{% asset_path portfolio/love-hate-films-film.png %}" alt="Love Hate Films Film Page">
 		<figcaption>
 			Film page on desktop
 		</figcaption>
@@ -55,26 +58,26 @@
 
 	<div class="six columns centered">
 		<p>
-			In addition to a regular desktop website, we really wanted to make Love Hate Films work well on phones and tablets. Following best practices of <a href="/web-design/process.html#responsive-web-design">responsive web design</a>, we engineered a design that would gracefully adapt to the screen size of the device the site is being viewed on.
+			In addition to a regular desktop website, we really wanted to make Love Hate Films work well on phones and tablets. Following best practices of <a href="/web-design/process/#responsive-web-design">responsive web design</a>, we engineered a design that would gracefully adapt to the screen size of the device the site is being viewed on.
 		</p>
 	</div>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path love-hate-films-home-mobile.png -->" alt="Love Hate Films Home Page on Mobile">
+		<img src="{% asset_path portfolio/love-hate-films-home-mobile.png %}" alt="Love Hate Films Home Page on Mobile">
 		<figcaption>
 			Home page on mobile
 		</figcaption>
 	</figure>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path love-hate-films-top-mobile.png -->" alt="Love Hate Films Loved Films Leaderboard on Mobile">
+		<img src="{% asset_path portfolio/love-hate-films-top-mobile.png %}" alt="Love Hate Films Loved Films Leaderboard on Mobile">
 		<figcaption>
 			Loved films leaderboard on mobile
 		</figcaption>
 	</figure>
 
 	<figure class="four columns img-block">
-		<img src="<!-- @path love-hate-films-film-mobile.png -->" alt="Love Hate Films Film Page on Mobile">
+		<img src="{% asset_path portfolio/love-hate-films-film-mobile.png %}" alt="Love Hate Films Film Page on Mobile">
 		<figcaption>
 			Film page on mobile
 		</figcaption>
@@ -87,7 +90,7 @@
 	</div>
 
 	<figure class="six columns centered img-block">
-		<img src="<!-- @path love-hate-films-logo-large.png -->" alt="Love Hate Films Logo">
+		<img src="{% asset_path portfolio/love-hate-films-logo-large.png %}" alt="Love Hate Films Logo">
 		<figcaption>
 			The new Love Hate Films logo
 		</figcaption>
@@ -99,10 +102,8 @@
 		</p>
 		<p>
 			<a href="http://lovehatefilms.com" class="btn btn-info btn-pad-right portfolio-website-link" target="_blank">View LoveHateFilms.com</a>
-			<a href="<!-- @path contact/enquiries.html -->" class="btn btn-success hire-btn">Hire us!</a>
+			<a href="/contact/enquiries/" class="btn btn-success hire-btn">Hire us!</a>
 		</p>
 	</div>
 
 </section>
-
-<!-- @include _footer -->

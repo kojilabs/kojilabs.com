@@ -1,5 +1,8 @@
-<!-- $title wlcome Website by Koji Labs -->
-<!-- @include _header -->
+---
+layout: default
+title: wlcome Website by Koji Labs
+description:
+---
 
 <section class="container content-box text-content">
 
@@ -30,14 +33,14 @@
 	</div>
 
 	<figure class="six columns img-block">
-		<img src="<!-- @path wlcome-home.png -->" alt="wlcome Home Page">
+		<img src="{% asset_path portfolio/wlcome-home.png %}" alt="wlcome Home Page">
 		<figcaption>
 			wlcome home page
 		</figcaption>
 	</figure>
 
 	<figure class="six columns img-block">
-		<img src="<!-- @path wlcome-how-it-works.png -->" alt="wlcome How it Works Page">
+		<img src="{% asset_path portfolio/wlcome-how-it-works.png %}" alt="wlcome How it Works Page">
 		<figcaption>
 			wlcome 'how it works' page
 		</figcaption>
@@ -45,14 +48,12 @@
 
 	<div class="six columns centered">
 		<p>
-			The website we developed is <a href="/web-design/process.html#responsive-web-design">fully responsive</a>, taking advantage of the latest web technologies to provide a great experience on any device.
+			The website we developed is <a href="/web-design/process/#responsive-web-design">fully responsive</a>, taking advantage of the latest web technologies to provide a great experience on any device.
 		</p>
 		<p>
 			<a href="http://wlcome.com" class="btn btn-info btn-pad-right portfolio-website-link" target="_blank">View wlcome.com</a>
-			<a href="<!-- @path contact/enquiries.html -->" class="btn btn-success hire-btn">Hire us!</a>
+			<a href="/contact/enquiries/" class="btn btn-success hire-btn">Hire us!</a>
 		</p>
 	</div>
 
 </section>
-
-<!-- @include _footer -->

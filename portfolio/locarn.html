@@ -1,5 +1,8 @@
-<!-- $title LOCARN Web Application by Koji Labs -->
-<!-- @include _header -->
+---
+layout: default
+title: LOCARN Web Application by Koji Labs
+description:
+---
 
 <section class="container content-box text-content">
 
@@ -33,7 +36,7 @@
 	</div>
 
 	<figure class="eight columns centered img-block">
-		<img src="<!-- @path locarn-home.png -->" alt="LOCARN Home Page">
+		<img src="{% asset_path portfolio/locarn-home.png %}" alt="LOCARN Home Page">
 		<figcaption>
 			LOCARN home page
 		</figcaption>
@@ -41,17 +44,15 @@
 
 	<div class="six columns centered">
 		<p>
-			Developing such a business-critical system naturally attracts many technical challenges. We successfully overcame all of the challenges we encountered and delivered a robust web application. 
+			Developing such a business-critical system naturally attracts many technical challenges. We successfully overcame all of the challenges we encountered and delivered a robust web application.
 		</p>
 		<p>
 			Sadly LOCARN are no longer trading, but this remains one of the projects we are most proud of.
 		</p>
 		<p>
-			<a href="#" class="btn btn-pad-right" disabled>This site is no longer live :(</a>
-			<a href="<!-- @path contact/enquiries.html -->" class="btn btn-success hire-btn">Hire us!</a>
+			<a href="#" class="btn btn-pad-right" disabled>This site is no longer live</a>
+			<a href="/contact/enquiries/" class="btn btn-success hire-btn">Hire us!</a>
 		</p>
 	</div>
 
 </section>
-
-<!-- @include _footer -->

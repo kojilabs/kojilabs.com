@@ -1,83 +1,122 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.kojilabs.com/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/about/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/about/manifesto.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/contact/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/contact/enquiries.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/idyia.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/johanna-gilbert.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/locarn.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/love-hate-films.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/pci-films-consulting.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/portfolio/wlcome.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/products/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/products/html5-foundations.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/products/kojitsu.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/web-design/index.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/web-design/process.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/newsletter.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/privacy.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.kojilabs.com/sitemap.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
+
+    <url>
+      <loc>https://kojilabs.com/about/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/contact/enquiries/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/products/html5-foundations/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/idyia/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/contact/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/products/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/web-design/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/about/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/johanna-gilbert/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/products/kojitsu/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/locarn/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/love-hate-films/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/css/main.css</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/about/manifesto/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/newsletter/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/pci-films-consulting/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/privacy/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/web-design/process/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/sitemap/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/sitemap.xml</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+      <loc>https://kojilabs.com/portfolio/wlcome/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
 </urlset>

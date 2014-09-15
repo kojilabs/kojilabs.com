@@ -1,0 +1,23 @@
+# Site settings
+title: Koji Labs
+email: matt.west@kojilabs.com
+description: Web Design Studio
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://kojilabs.com" # the base hostname & protocol for your site
+twitter_username: kojilabs
+github_username:  kojilabs
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:title/
+
+sass:
+  style: :compressed
+  sass_dir: assets/sass
+
+assets:
+  js_compressor: uglifier
+  css_compressor: sass
