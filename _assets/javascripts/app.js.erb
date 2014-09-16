@@ -11,7 +11,8 @@ $(document).ready(function(){
   $('.play-button a').click(function(e) {
     e.preventDefault();
 
-    // ga('send', 'event', 'Animations', 'Play', 'Home animation');
+    ga('send', 'event', 'Animations', 'Play', 'Home animation');
+    _gs('event', 'Played home page animation');
     runHomeAnimation();
   });
 
@@ -46,26 +47,32 @@ $(document).ready(function(){
 
   $('.hire-btn').click(function(e) {
     ga('send', 'event', 'Buttons', 'Click', 'Hire us');
+    _gs('event', 'Clicked hire button');
   });
 
   $('.twitter-btn').click(function(e) {
     ga('send', 'event', 'Buttons', 'Click', 'Twitter');
+    _gs('event', 'Clicked twitter button');
   });
 
   $('.linkedin-btn').click(function(e) {
     ga('send', 'event', 'Buttons', 'Click', 'LinkedIn');
+    _gs('event', 'Clicked linkedin button');
   });
 
   $('.facebook-btn').click(function(e) {
     ga('send', 'event', 'Buttons', 'Click', 'Facebook');
+    _gs('event', 'Clicked facebook button');
   });
 
   $('.newsletter-btn').click(function(e) {
     ga('send', 'event', 'Buttons', 'Click', 'Newsletter');
+    _gs('event', 'Clicked newsletter button');
   });
 
   $('.portfolio-website-link').click(function(e) {
     ga('send', 'event', 'Buttons', 'Click', 'Portfolio Website Link');
+    _gs('event', 'Clicked a portfolio website link');
   });
 
 
@@ -137,6 +144,7 @@ $(document).ready(function(){
         $('#details').val('');
 
         ga('send', 'event', 'Forms', 'Submit', 'Enquiries');
+        _gs('event', 'Submitted enquiry form');
       })
       .fail(function(data) {
         // Make sure that the formMessages div has the 'error' class.
