@@ -40,6 +40,11 @@ layout: null
     </url>
 
     <url>
+      <loc>https://kojilabs.com/portfolio/seaton-gifts/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
       <loc>https://kojilabs.com/portfolio/</loc>
       <changefreq>monthly</changefreq>
     </url>
@@ -53,7 +58,7 @@ layout: null
       <loc>https://kojilabs.com/web-design/</loc>
       <changefreq>monthly</changefreq>
     </url>
-    
+
     <url>
       <loc>https://kojilabs.com/portfolio/johanna-gilbert/</loc>
       <changefreq>monthly</changefreq>
