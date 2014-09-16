@@ -5,9 +5,12 @@
   outline: 1px solid $border-color
   border-top: 4px solid $purple
   padding: $gd-padding*1.5 $gd-padding*2 $gd-padding
-  // text-align: center
 
   h1
     font-size: 3em
     margin-bottom: 0
-    // text-align: center
+
+  @include media-query(800px)
+    margin: 0
+    outline: none
+    padding: $spacing-unit/2
