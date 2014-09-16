@@ -20,6 +20,11 @@ layout: null
     </url>
 
     <url>
+      <loc>https://kojilabs.com/about/testimonials/</loc>
+      <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
       <loc>https://kojilabs.com/contact/</loc>
       <changefreq>monthly</changefreq>
     </url>

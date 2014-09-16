@@ -483,6 +483,43 @@ footer
       margin-bottom: 0
 
 
+.testimonial
+  padding: $gd_padding*3 0
+
+  blockquote
+    margin: 0 0 1em 0
+    font-size: 1.3em
+    line-height: 1.5
+    font-family: "ff-tisa-web-pro"
+    font-style: italic
+    position: relative
+
+    &::before
+      content: '“'
+      color: #E6E6E6
+      font-size: 5em
+      display: block
+      position: absolute
+      left: -0.125em
+      top: -0.5em
+
+  .t-info
+    text-align: center
+
+  .t-image
+    padding-bottom: 1em
+
+    img
+      width: 150px
+      border-radius: 150px
+
+  .t-author
+    padding-bottom: 0.25em
+    font-weight: 600
+
+  .t-title
+    font-size: 0.9em
+
 
 @import "_forms"
 @import "_buttons"
@@ -652,6 +689,10 @@ footer
   #home-blog .post,
   #home-code-blog .post
     min-height: 0
+
+  .testimonial
+    .t-info
+      margin-bottom: $gd_padding
 
 
 @media screen and (min-width: 0px) and (max-width: 860px)
