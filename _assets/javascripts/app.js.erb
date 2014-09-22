@@ -36,7 +36,7 @@ $(document).ready(function(){
 
   // Load the blog feed if this is the home page
   if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    loadFeed('#home-blog', 'http://blog.kojilabs.com/rss');
+    loadFeed('#home-blog', 'https://kojilabs.com/blog/feed.xml');
     loadFeed('#home-code-blog', 'http://code.kojilabs.com/feed.xml');
   }
 
@@ -447,7 +447,7 @@ function loadFeed(selector, feedUrl) {
             eleClass = '';
           }
 
-          var postHtml = '<article class="post home four columns ' + eleClass + '"><a href="' + e.link + '" target="_blank"><h3>' + e.title + '</h3><div class="post-info"><img src="<%= asset_path 'matt-west-mini.jpg' %>" alt="Matt West" width="24" height="24"><div class="post-author">Matt West</div><div class="post-date"> wrote this on ' + date.getDate() + '<sup>' + ord(date.getDate()) + '</sup> ' + month(date.getMonth()) + '</div></div></a></article>';
+          var postHtml = '<article class="post home four columns ' + eleClass + '"><a href="' + e.link + '" target="_blank"><h3>' + e.title + '</h3><div class="home-post-info"><img src="<%= asset_path 'matt-west-mini.jpg' %>" alt="Matt West" width="24" height="24"><div class="home-post-author">Matt West</div><div class="home-post-date"> wrote this on ' + date.getDate() + '<sup>' + ord(date.getDate()) + '</sup> ' + month(date.getMonth()) + '</div></div></a></article>';
 
           $(selector).append(postHtml);
         });
