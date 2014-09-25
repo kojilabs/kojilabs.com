@@ -11,7 +11,7 @@ layout: default
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">
-        {% if author %}<span class="post-meta-author"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}.jpg?s=24" width="24" height="24"> {{ author.display_name }}</span> wrote this on {% endif %}
+        {% if author %}<span class="post-meta-author"><img src="https://www.gravatar.com/avatar/{{ author.gravatar }}.jpg?s=24" width="24" height="24"> {{ author.display_name }}</span> wrote this on {% endif %}
         {{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}
       </p>
     </header>
