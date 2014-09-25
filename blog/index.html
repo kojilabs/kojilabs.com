@@ -4,22 +4,17 @@ title: Koji Labs Blog
 ---
 
 <section class="container content-box blog-list">
-  <div class="blog-sidebar four columns">
-    <h1 class="blog-category-title">Recent Blog Posts</h1>
-    <nav class="blog-nav">
-      <ul>
-        {% category_list %}
-      </ul>
-    </nav>
-  </div>
+  {% include blog_sidebar.html %}
 
-  <ul class="post-list eight columns">
-    {% for post in site.posts %}
-      {% assign author = site.authors[post.author] %}
-      <li>
-        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <span class="post-meta">{% if author %}<span class="post-meta-author"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}.jpg?s=24" width="24" height="24"> {{ author.display_name }}</span> wrote this on {% endif %} {{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="post-list eight columns no-padding">
+    <ul>
+      {% for post in site.posts %}
+        {% assign author = site.authors[post.author] %}
+        <li>
+          <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <span class="post-meta">{% if author %}<span class="post-meta-author"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}.jpg?s=24" width="24" height="24"> {{ author.display_name }}</span> wrote this on {% endif %} {{ post.date | date: "%b %-d, %Y" }} // {{ post.categories | category_links }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </section>

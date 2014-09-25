@@ -1,5 +1,13 @@
 <head>
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
+  <title>
+    {% if page.tag %}
+      Posts tagged '{{ page.tag }}' - Koji Labs Blog
+    {% else if page.title %}
+      {{ page.title }}
+    {% else %}
+      {{ site.title }} - {{ site.description }}
+    {% endif %}
+  </title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

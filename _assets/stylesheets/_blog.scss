@@ -10,38 +10,48 @@ $base-font-size:   1em;
 }
 
 .blog-sidebar {
-  padding: $gd_padding/1.5 $gd_padding;
+  padding: $gd_padding*2;
   height: auto;
+  border-right: 1px solid $border_color;
+  position: relative;
+  right: -1px;
 
-  h1.blog-category-title {
-    float: left;
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 600;
-    line-height: 1;
-    color: $text_grey;
+  h1.blog-sidebar-title {
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+
+    a,
+    a:visited {
+      color: $text_color;
+
+      &:hover,
+      &:focus {
+        color: $green;
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 3em;
+    margin-bottom: 0.5em;
+    color: $green;
     letter-spacing: 0.3px;
     text-transform: uppercase;
   }
 
   nav.blog-nav {
-    float: right;
-
     ul {
       margin: 0;
       padding: 0;
 
       li {
-        display: inline-block;
-        vertical-align: top;
-        line-height: 1;
-        font-size: 0.9em;
 
         a,
         a:visited {
-          font-weight: 600;
-          letter-spacing: 0.3px;
-          text-transform: uppercase;
+
         }
       }
     }
@@ -88,59 +98,73 @@ $base-font-size:   1em;
 }
 
 .post-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   border-left: 1px solid $border_color;
 
-  h2 {
-    font-size: 1.6em;
-    margin: 0;
-    line-height: 1.25;
+  .blog-category-title {
+    padding: $gd_padding/2 $gd_padding;
     font-weight: 600;
-    text-transform: none;
+    color: #999;
+    border-bottom: 1px solid $border_color;
   }
 
-  > li {
-    padding: $gd-padding;
-    border-top: 1px solid $border_color;
-    transition: background 200ms ease-in-out;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-    &.no-border {
-      border-top: 0;
+    h2 {
+      font-size: 1.6em;
+      margin: 0;
+      line-height: 1.25;
+      font-weight: 600;
+      text-transform: none;
     }
 
-    a,
-    a:visited {
-      color: $text-color;
-    }
-
-    .post-meta {
-      a,
-      a:visited {
-        color: $purple;
-      }
-    }
-
-    &:hover {
-      background: $purple;
-      color: #FFF;
-
-      .post-meta,
-      .post-meta-author {
-        color: #FFF;
-      }
-
-      a,
-      a:visited {
-        color: #FFF;
-      }
-    }
-  }
-
-  @include media-query($on-palm) {
     > li {
-      padding: $gd-padding/2;
+      padding: $gd-padding;
+      border-top: 1px solid $border_color;
+      transition: background 200ms ease-in-out;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      &.no-border {
+        border-top: 0;
+      }
+
+      a,
+      a:visited {
+        color: $text-color;
+      }
+
+      .post-meta {
+        a,
+        a:visited {
+          color: $purple;
+        }
+      }
+
+      &:hover {
+        background: $purple;
+        color: #FFF;
+
+        .post-meta,
+        .post-meta-author {
+          color: #FFF;
+        }
+
+        a,
+        a:visited {
+          color: #FFF;
+        }
+      }
+    }
+
+    @include media-query($on-palm) {
+      > li {
+        padding: $gd-padding/2;
+      }
     }
   }
 }
@@ -160,9 +184,16 @@ $base-font-size:   1em;
 /**
  * Posts
  */
+
+.post {
+  padding: $gd_padding*2.15 $gd_padding*4;
+  border-left: 1px solid $border_color
+}
+
 header.post-header {
-  margin-bottom: $gd-padding * 2;
+  margin-bottom: $gd-padding;
   height: auto;
+  text-align: center
 }
 
 .post-title {
@@ -171,6 +202,7 @@ header.post-header {
     line-height: 1.25;
     margin: 0;
     font-weight: 600;
+    text-align: center;
 
     @include media-query($on-laptop) {
       font-size: 2.5em;
@@ -337,12 +369,8 @@ header.post-header {
 
 #mc_embed_signup {
   @extend %clearfix;
-  margin: $gd-padding 0 $gd-padding*2 0;
-  padding: $gd-padding;
-  border: 1px solid #f9eede;
-  border-radius: 3px;
-  /* background: #f9eede; */
-  background: #fdf9f3;
+  margin: 1em 0;
+  padding: 0;
 
   .indicates-required {
     margin-right: 0;
@@ -363,6 +391,7 @@ header.post-header {
     .mc-field-group {
       min-height: 0;
       width: 100%;
+      margin-top: 0.25em;
       /* margin: 1em 0; */
 
       label {
@@ -372,7 +401,7 @@ header.post-header {
 
       input {
         margin-top: 0.5em;
-        border: 1px solid #f9eede;
+        border: 1px solid $border_color;
         border-radius: 3px;
         font-size: $base-font-size;
         -webkit-font-smoothing: antialiased;
@@ -385,6 +414,13 @@ header.post-header {
       border: 2px solid $green;
       cursor: pointer;
       background: #FFF;
+      padding: 1em 1.25em;
+      margin-top: 0.25em;
+    }
+
+    div.response {
+      width: auto;
+      float: none;
     }
   }
 }

@@ -79,11 +79,11 @@ module Jekyll
         self.read_yaml(template_dir, template)
         self.data['category']    = category
         # Set the title for this page.
-        title_prefix             = site.config['category_title_prefix'] || 'Category: '
-        self.data['title']       = "#{title_prefix}#{category}"
+        title_prefix             = ''
+        self.data['title']       = "#{title_prefix}#{category.capitalize} - Koji Labs Blog"
         # Set the meta-description for this page.
-        meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
-        self.data['description'] = "#{meta_description_prefix}#{category}"
+        meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Posts in '
+        self.data['description'] = "#{meta_description_prefix}#{category.capitalize}"
       else
         @perform_render = false
       end
