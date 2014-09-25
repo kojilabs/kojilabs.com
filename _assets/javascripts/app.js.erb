@@ -36,7 +36,7 @@ $(document).ready(function(){
 
   // Load the blog feed if this is the home page
   if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    loadFeed('#home-blog', 'https://kojilabs.com/blog/feed.xml');
+    loadFeed('#home-blog', 'https://kojilabs.com/blog/feed.xml?alt=rss');
     loadFeed('#home-code-blog', 'http://code.kojilabs.com/feed.xml');
   }
 
