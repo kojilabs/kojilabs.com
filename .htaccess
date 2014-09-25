@@ -21,12 +21,12 @@ ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
 # Redirects for old posts.
-Redirect 301 /post/97585161632/announcing-the-koji-labs-code-blog https://kojilabs.com/blog/announcing-the-koji-labs-code-blog/
-Redirect 301 /post/97292456127/reflections-on-building-kojitsu https://kojilabs.com/blog/reflections-on-building-kojitsu/
-Redirect 301 /post/90543010567/kojitsu-is-shutting-down https://kojilabs.com/blog/kojitsu-is-shutting-down/
-Redirect 301 /post/87009815222/save-your-kojitsu-links-to-pocket-and-instapaper https://kojilabs.com/blog/save-your-kojitsu-links-to-pocket-and-instapaper/
-Redirect 301 /post/78465785139/announcing-daily-summary-emails-for-kojitsu https://kojilabs.com/blog/announcing-daily-summary-emails-for-kojitsu/
-Redirect 301 /post/76433776551/call-for-beta-testers https://kojilabs.com/blog/call-for-beta-testers/
+Redirect 301 /post/97585161632/announcing-the-koji-labs-code-blog /blog/announcing-the-koji-labs-code-blog/
+Redirect 301 /post/97292456127/reflections-on-building-kojitsu /blog/reflections-on-building-kojitsu/
+Redirect 301 /post/90543010567/kojitsu-is-shutting-down /blog/kojitsu-is-shutting-down/
+Redirect 301 /post/87009815222/save-your-kojitsu-links-to-pocket-and-instapaper /blog/save-your-kojitsu-links-to-pocket-and-instapaper/
+Redirect 301 /post/78465785139/announcing-daily-summary-emails-for-kojitsu /blog/announcing-daily-summary-emails-for-kojitsu/
+Redirect 301 /post/76433776551/call-for-beta-testers /blog/call-for-beta-testers/
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME}.html -f
