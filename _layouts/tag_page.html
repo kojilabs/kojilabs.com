@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="container content-box blog-list">
+  <div class="post-list eight columns no-padding pull-right">
+    <div class="blog-category-title">Posts tagged '{{ page.tag }}'</div>
+    <ul>
+    {% for post in page.posts %}
+      {% assign author = site.authors[post.author] %}
+      <li>
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <span class="post-meta">{% if author %}<span class="post-meta-author"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}.jpg?s=24" width="24" height="24"> {{ author.display_name }}</span> wrote this on {% endif %} {{ post.date | date: "%b %-d, %Y" }} // {{ post.categories | category_links }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  
+  {% include blog_sidebar.html %}
+</section>

@@ -1,5 +1,13 @@
 <head>
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
+  <title>
+    {% if page.tag %}
+      Posts tagged '{{ page.tag }}' - Koji Labs Blog
+    {% else if page.title %}
+      {{ page.title }}
+    {% else %}
+      {{ site.title }} - {{ site.description }}
+    {% endif %}
+  </title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,6 +42,7 @@
 
   <meta name="google-site-verification" content="b_ZZilDun_pTR1OxOnTxJNxgppNKHvqUNEb2e2x_dvM" />
 
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
   {% stylesheet main %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

@@ -1,6 +1,7 @@
 # Site settings
 title: Koji Labs
 email: matt.west@kojilabs.com
+author: Matt West
 description: Web Design Studio
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://kojilabs.com" # the base hostname & protocol for your site
@@ -12,7 +13,7 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-permalink: /:title/
+permalink: /blog/:title/
 
 sass:
   style: :compressed
@@ -21,3 +22,20 @@ sass:
 assets:
   js_compressor: uglifier
   css_compressor: sass
+
+category_dir: blog/category
+
+tag_page_layout: tag_page
+tag_page_dir: blog/tag
+tag_permalink_style: pretty
+
+authors:
+  mattwest:
+    name: Matt West
+    display_name: Matt West
+    gravatar: 61695a5d7512d464d38af376b10824b8
+    email: matt.west@kojilabs.com
+    web: http://mattwest.io
+    twitter: mattantwest
+    github: matt-west
+    bio: Founder of Koji Labs, tech entrepreneur, and author of HTML5 Foundations.

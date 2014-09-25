@@ -119,7 +119,7 @@ header
   .nav-toggle
     display: none
 
-  nav
+  nav.site-nav
     float: left
 
     ul
@@ -332,7 +332,7 @@ header
       line-height: 1.25
       font-weight: 600
 
-    .post-info
+    .home-post-info
       font-size: 0.9em
       margin-top: 1.25em
       color: $text_grey
@@ -349,12 +349,12 @@ header
         line-height: 24px
         vertical-align: middle
 
-      .post-author
+      .home-post-author
         margin-left: 0.5em
         font-weight: bold
         color: $green
 
-      .post-date
+      .home-post-date
         margin-left: 1px
 
     &:hover
@@ -364,8 +364,8 @@ header
       h3
         color: #FFF
 
-      .post-info,
-      .post-author
+      .home-post-info,
+      .home-post-author
         color: #FFF
 
 
@@ -524,6 +524,7 @@ footer
 
 @import "_forms"
 @import "_buttons"
+@import "_blog"
 
 
 /////////////////////////
@@ -552,6 +553,13 @@ footer
     .post
       min-height: 195px
 
+@media screen and (min-width: 0px) and (max-width: 1000px)
+  .post
+    padding: $gd_padding
+
+  .blog-sidebar
+    padding: $gd_padding
+
 @media screen and (min-width: 0px) and (max-width: 910px)
   header
     height: auto
@@ -575,7 +583,7 @@ footer
       font-size: 1.2em !important
 
   footer
-    padding: $gd_padding*2 ($gd_padding - 0.75em) $gd_padding !important
+    padding: $gd_padding 0 !important
 
     .columns
       margin-bottom: $gd_padding
@@ -636,7 +644,7 @@ footer
           &:active
             background: $darker_green
 
-    nav
+    nav.site-nav
       float: none
       display: block
       clear: both
@@ -667,6 +675,20 @@ footer
   .text-content
     padding-top: 5em
     padding-bottom: 5em
+
+  .post
+    padding: $gd_padding $gd_padding/2 $gd_padding/2
+
+  .blog-sidebar
+    padding: $gd_padding/2
+
+    h1.blog-sidebar-title
+      font-size: 1.8em
+
+  .post-list
+    .blog-category-title
+      padding: 0.75em 1em
+
 
   .img-block
     padding: 2em 0
