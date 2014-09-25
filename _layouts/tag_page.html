@@ -3,9 +3,7 @@ layout: default
 ---
 
 <section class="container content-box blog-list">
-  {% include blog_sidebar.html %}
-
-  <div class="post-list eight columns no-padding">
+  <div class="post-list eight columns no-padding pull-right">
     <div class="blog-category-title">Posts tagged '{{ page.tag }}'</div>
     <ul>
     {% for post in page.posts %}
@@ -17,4 +15,6 @@ layout: default
     {% endfor %}
     </ul>
   </div>
+  
+  {% include blog_sidebar.html %}
 </section>

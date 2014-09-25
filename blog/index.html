@@ -4,9 +4,8 @@ title: Koji Labs Blog
 ---
 
 <section class="container content-box blog-list">
-  {% include blog_sidebar.html %}
-
-  <div class="post-list eight columns no-padding">
+  <div class="post-list eight columns no-padding pull-right">
+    <div class="blog-category-title">Recent Posts</div>
     <ul>
       {% for post in site.posts %}
         {% assign author = site.authors[post.author] %}
@@ -17,4 +16,6 @@ title: Koji Labs Blog
       {% endfor %}
     </ul>
   </div>
+
+  {% include blog_sidebar.html %}
 </section>
