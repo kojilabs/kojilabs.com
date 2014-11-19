@@ -10,13 +10,10 @@
     $phone = strip_tags(trim($_POST["phone"]));
     $website = strip_tags(trim($_POST["website"]));
 
-    $budget = strip_tags(trim($_POST["budget"]));
-    $timeframe = strip_tags(trim($_POST["timeframe"]));
-
     $details = strip_tags(trim($_POST["details"]));
 
     // Check that data was sent to the mailer.
-    if ( empty($name) OR empty($company) OR empty($email) OR empty($phone) OR empty($budget) OR empty($timeframe) OR empty($details) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if ( empty($name) OR empty($company) OR empty($email) OR empty($phone) OR empty($details) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
       // Set a 400 (bad request) response code and exit.
       header("HTTP/1.1 400 Bad Request");
       echo "Oops! There was a problem with your submission. Please complete the form and try again.";
@@ -78,14 +75,6 @@
 																						<td>' . $website . '</td>
 																					</tr>
 																					<tr>
-																						<td width="130" style="font-weight: bold;">Budget:</td>
-																						<td>' . $budget . '</td>
-																					</tr>
-																					<tr>
-																						<td width="130" style="font-weight: bold;">Timeframe:</td>
-																						<td>' . $timeframe . '</td>
-																					</tr>
-																					<tr>
 																						<td width="130" style="font-weight: bold;">Details:</td>
 																						<td>' . $details . '</td>
 																					</tr>
@@ -98,10 +87,10 @@
 											      </table>
 											    </center>
 											  </body>
-											</html>';    
+											</html>';
 
 		// Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {       
+    if (mail($recipient, $subject, $email_content, $email_headers)) {
       // Set a 200 (okay) response code.
       header("HTTP/1.1 200 OK");
       echo "Thank you! Your enquiry has been sent. Matt will be in touch shortly.";
@@ -114,6 +103,6 @@
 		// Set a 400 (bad request) response code and exit.
     header("HTTP/1.1 400 Bad Request");
     echo "Oops! There was a problem with your submission. Please complete the form and try again.";
-    exit;	
+    exit;
 	}
 ?>

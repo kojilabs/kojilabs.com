@@ -27,7 +27,7 @@ html
   -webkit-font-smoothing: antialiased
 
 body
-  background: #F2F2F2
+  background: #F7F7F7
   color: $text_color
   font-family: "proxima-nova", Helvetica, Arial, sans-serif
   padding: 0 $gd_padding/2
@@ -379,6 +379,8 @@ header
     line-height: 1
     color: $text_grey
     letter-spacing: 0.3px
+    margin: 0
+    text-align: center
 
     i
       vertical-align: middle
@@ -520,6 +522,57 @@ footer
 
   .t-title
     font-size: 0.9em
+
+.fake-browser
+  @extend .clearfix
+  // min-height: 280px
+  border: 1px solid $border_color
+  +border-radius(3px)
+
+  .fb-content
+    @extend .clearfix
+    font-size: 0
+
+    img
+      float: left
+
+  .fb-header
+    @extend .clearfix
+    padding: 11px 13px
+    background-color: #e0e0e0
+    +background(linear-gradient(#f7f7f7, #dbdbdb))
+    border-bottom: 1px solid #d6d6d6
+
+    i
+      display: block
+      float: left
+      width: 10px
+      height: 10px
+      +border-radius(5px)
+      margin-right: 7px
+      border: 1px solid rgba(0,0,0,0.1)
+
+      &.close
+        background: #e51700
+
+      &.minimize
+        background: #ff7300
+
+      &.expand
+        background: #00b234
+
+  &.small
+    .fb-header
+      padding: 9px 10px
+
+      i
+        display: block
+        float: left
+        width: 8px
+        height: 8px
+        +border-radius(4px)
+        margin-right: 6px
+
 
 
 @import "_forms"
