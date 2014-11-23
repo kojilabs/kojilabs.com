@@ -25,6 +25,20 @@ button.btn
 		border-color: $text_color
 		background: $text_color
 
+	&.btn-purple
+		border-color: $purple
+		color: $purple
+		background: #FFF
+
+		&:hover,
+		&:focus
+			background: $purple
+			color: #FFF
+
+			&:active
+				border-color: $dark_purple
+				background: $dark_purple
+
 	&.btn-info
 		border-color: $blue
 		color: $blue
@@ -82,7 +96,7 @@ button.btn
 		border-color: $border-color
 		color: $border-color
 		cursor: not-allowed
-		
+
 		&:hover,
 		&:focus,
 		&:active
@@ -99,6 +113,9 @@ button.btn
 
 	&.btn-pad-right
 		margin-right: $gd_padding
+
+	&.btn-inline
+		margin-right: 1em
 
 .center-btns
 	text-align: center

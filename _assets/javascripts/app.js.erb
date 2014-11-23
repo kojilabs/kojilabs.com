@@ -5,16 +5,34 @@
 $(document).ready(function(){
   'use strict';
 
-  $('#home-feature').prepend('<div class="ball one"></div><div class="ball two"></div><div class="ball three"></div><div class="ball four"></div>');
-  $('#home-feature').append('<div class="play-button"><a href="#">(surprise me)</a></div>');
+  // $('#home-feature').prepend('<div class="ball one"></div><div class="ball two"></div><div class="ball three"></div><div class="ball four"></div>');
+  // $('#home-feature').append('<div class="play-button"><a href="#">(surprise me)</a></div>');
 
-  $('.play-button a').click(function(e) {
-    e.preventDefault();
+  // $('.play-button a').click(function(e) {
+  //   e.preventDefault();
+  //
+  //   ga('send', 'event', 'Animations', 'Play', 'Home animation');
+  //   _gs('event', 'Played home page animation');
+  //   runHomeAnimation();
+  // });
 
-    ga('send', 'event', 'Animations', 'Play', 'Home animation');
-    _gs('event', 'Played home page animation');
-    runHomeAnimation();
+  ////////////////////////////////
+  // Smooth scroll for anchors
+  ////////////////////////////////
+
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
   });
+
 
   ////////////////////////////////
   // Navigation
@@ -36,7 +54,7 @@ $(document).ready(function(){
 
   // Load the blog feed if this is the home page
   if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    loadFeed('#home-blog', 'https://kojilabs.com/blog/feed.xml?alt=rss', false);
+    // loadFeed('#home-blog', 'https://kojilabs.com/blog/feed.xml?alt=rss', false);
     // loadFeed('#home-code-blog', 'http://code.kojilabs.com/feed.xml', true);
   }
 

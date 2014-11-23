@@ -10,14 +10,14 @@ $base-font-size:   1em;
 }
 
 .blog-sidebar {
-  padding: $gd_padding*2;
+  padding: $gd-padding;
   height: auto;
   border-right: 1px solid $border_color;
   position: relative;
   right: -1px;
 
   h1.blog-sidebar-title {
-    font-size: 4em;
+    font-size: 3em;
     margin-top: 0;
     margin-bottom: 0;
     letter-spacing: 0.3px;
@@ -186,7 +186,7 @@ $base-font-size:   1em;
  */
 
 .post {
-  padding: $gd_padding*2.15 $gd_padding*4;
+  padding: $gd_padding*2.15 $gd_padding*5;
   border-left: 1px solid $border_color
 }
 

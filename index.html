@@ -5,15 +5,96 @@ description: Koji Labs is a web design and development studio that works to esta
 ---
 
   <section id="home-feature" class="container content-box">
-  	<h1 class="brand">Koji Labs</h1>
-    <h2 class="slogan">Web Design Studio</h2>
-    <div class="home-buttons">
-    	<a href="/portfolio/" class="btn btn-white">Portfolio</a> <a href="/contact/enquiries/" class="btn btn-white hire-btn">Hire us</a>
+    <div class="home-feature-wrapper">
+    	<h1 class="brand">Koji Labs</h1>
+      <h2 class="slogan"><span>Web Design Studio</span> <i class="fa fa-map-marker"></i> Market Harborough, England</h2>
     </div>
+    <a href="#services" class="learn-more">
+      what we do<br>
+      <i class="fa fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <section id="services" class="container content-box">
+    <div class="clearfix home-service">
+      <div class="six columns pull-right">
+        <h2>Website Design</h2>
+        <p>
+          We work with businesses to design and build bespoke websites that meet the specific needs of the client. After many years in the industry we've acquired a wealth of knowledge about what works, and what doesn't work when promoting your business online.
+        </p>
+        <p>
+          All of our design and development work is done in-house, ensuring that projects move quickly and the end product exceeds your highest expectations.
+        </p>
+        <p>
+          <a href="/contact/enquiries" class="btn btn-success btn-inline">Enquire about a project</a> <a href="/web-design/" class="btn btn-info btn-inline">Find out more</a>
+        </p>
+      </div>
+      <div class="six columns">
+        <div class="fake-browser">
+          <div class="fb-header">
+            <i class="close"></i><i class="minimize"></i><i class="expand"></i>
+          </div>
+          <div class="fb-content">
+            <img src="{% asset_path portfolio/love-hate-films-home-alt.png %}" alt="Love Hate Films Home Page">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix home-service">
+      <div class="six columns">
+        <h2>Web Applications</h2>
+        <p>
+          More and more services are moving to the cloud but it's not always possible to find online products that meets your specific needs. We work with businesses to develop bespoke web applications that transform how organisations operate.
+        </p>
+        <p>
+          We can take care of everything, from the initial design and development of the application through to managing the server infrastructure and providing ongoing training and support.
+        </p>
+        <p>
+          <a href="/contact/enquiries" class="btn btn-success">Enquire about a project</a>
+        </p>
+      </div>
+      <div class="six columns">
+        <div class="fake-browser">
+          <div class="fb-header">
+            <i class="close"></i><i class="minimize"></i><i class="expand"></i>
+          </div>
+          <div class="fb-content">
+            <img src="{% asset_path portfolio/pci-reports-portal.png %}" alt="PCI Films Reports Portal">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix home-service">
+      <div class="six columns pull-right">
+        <h2>Products</h2>
+        <p>
+          As well as working directly with clients, we also develop a number of digital and physical products that satisfy our own entrepreneurial urges.
+        </p>
+        <p>
+          Our most recent projects include a social news aggregator called <a href="/products/kojitsu">Kojitsu</a> and <a href="/products/html5-foundations">HTML5 Foundations</a>, a book that teaches people how to build websites.
+        </p>
+        <p>
+          <a href="/products/" class="btn btn-success">View our products</a>
+        </p>
+      </div>
+      <div class="six columns">
+        <div class="fake-browser">
+          <div class="fb-header">
+            <i class="close"></i><i class="minimize"></i><i class="expand"></i>
+          </div>
+          <div class="fb-content">
+            <img src="{% asset_path kojitsu-web-alt.png %}" alt="Kojitsu Web Application">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <section id="home-projects" class="container content-box">
-  	<h2><a href="/portfolio/">Recent Projects</a></h2>
+  	<h2><a href="/portfolio/">Recent Clients</a></h2>
     <div class="project home four columns no-border">
       <a href="/portfolio/love-hate-films/">
         <div class="project-image lovehatefilms"></div>
@@ -41,9 +122,36 @@ description: Koji Labs is a web design and development studio that works to esta
         </div>
       </a>
     </div>
+    <div class="project home four columns">
+      <a href="/portfolio/idyia/">
+        <div class="project-image idyia"></div>
+        <div class="project-info">
+          <div class="project-title">Idyia Coaching &amp; Development</div>
+          <div class="project-tech">Perch CMS <span class="plus">+</span> Responsive Web Design</div>
+        </div>
+      </a>
+    </div>
+    <div class="project home four columns">
+      <a href="/portfolio/locarn/">
+        <div class="project-image locarn"></div>
+        <div class="project-info">
+          <div class="project-title">LOCARN</div>
+          <div class="project-tech">Ruby on Rails Development</div>
+        </div>
+      </a>
+    </div>
+    <div class="project home four columns">
+      <a href="/portfolio/wlcome/">
+        <div class="project-image wlcome"></div>
+        <div class="project-info">
+          <div class="project-title">wlcome</div>
+          <div class="project-tech">Branding <span class="plus">+</span> Responsive Web Design</div>
+        </div>
+      </a>
+    </div>
   </section>
 
 
-  <section id="home-blog" class="container content-box">
-  	<h2><a href="http://blog.kojilabs.com" target="_blank">Recent Blog Posts</a></h2>
-  </section>
+  <!-- <section id="home-blog" class="container content-box">
+    <h2><a href="http://blog.kojilabs.com" target="_blank">Recent Blog Posts</a></h2>
+  </section> -->
