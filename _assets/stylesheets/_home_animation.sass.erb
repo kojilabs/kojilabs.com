@@ -5,10 +5,10 @@
 	background: url(<%= asset_path 'swirl_pattern.png' %>)
 	height: 680px
 	height: 100vh
-	border: 0 !important
+	border-bottom: 1px solid $border-color
 	// background-repeat: no-repeat
 	// background-size: cover
-	// background-position: top center
+	// background-position: 0% 50%
 
 	// .wrapper
 	// 	position: absolute
@@ -61,7 +61,8 @@
 		width: 150px
 		text-align: center
 		font-weight: 600
-		opacity: 0.7
+		opacity: 0.5
+		color: $purple
 		+transition(opacity 100ms ease-in-out)
 
 		&:hover,
@@ -70,14 +71,15 @@
 			color: $purple
 
 	.home-feature-wrapper
-		border: 3px solid $border-color
-		padding: $gd-padding*2
+		padding: 3.5em
 		width: 600px
 		position: absolute
 		left: 50%
-		margin-left: -300px
 		top: 50%
-		margin-top: -118px
+		margin-left: -300px
+		margin-top: -114px
+		// +text-shadow(0 1px 3px rgba(0,0,0,0.2))
+		border: 2px solid $border-color
 		background: #FFF
 
 	.brand
@@ -102,7 +104,7 @@
 		font-weight: 600
 		margin-top: 0.5em
 		margin-bottom: 0
-		color: $text_grey
+		color: #A2A2A2
 		text-transform: none
 		// text-shadow: 0 1px 3px rgba(0,0,0,0.8)
 		// opacity: 0
@@ -155,6 +157,13 @@
 			position: relative
 			left: 0
 			top: 0
+			border: 1px solid $border-color
+
+		.brand
+			font-size: 4em
+
+		.slogan
+			font-size: 1em
 
 	#services
 		h2
@@ -164,20 +173,22 @@
 		.home-service
 			padding: 2em 0
 
-@media screen and (min-width: 0px) and (max-width: 660px)
+@media screen and (min-width: 0px) and (max-width: 560px)
 
 	#home-feature
 
 		.home-feature-wrapper
 			margin: 0.5em
-			padding: 1.5em 1em
-			border: 2px solid $border-color
+			padding: 2em 1em
+			border: 0
+			background: transparent
 
 		.brand
 			font-size: 3.2em
 
 		.slogan
 			font-size: 0.9em
+			color: #333
 
 			span
 				display: block
@@ -185,3 +196,4 @@
 
 			i
 				margin-left: 0
+				color: #A2A2A2
