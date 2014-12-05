@@ -3,8 +3,8 @@
 	overflow: hidden
 	background: #333
 	background: url(<%= asset_path 'swirl_pattern.png' %>)
-	height: 680px
-	height: 100vh
+	// height: 480px
+	// height: 100vh
 	border-bottom: 1px solid $border-color
 	// background-repeat: no-repeat
 	// background-size: cover
@@ -73,14 +73,16 @@
 	.home-feature-wrapper
 		padding: 3.5em
 		width: 600px
-		position: absolute
-		left: 50%
-		top: 50%
-		margin-left: -300px
-		margin-top: -114px
+		margin: 7em auto
 		// +text-shadow(0 1px 3px rgba(0,0,0,0.2))
-		border: 2px solid $border-color
+		border: 1px solid $border-color
 		background: #FFF
+
+	.feature-content
+		background: $purple
+		background: rgba(129, 31, 171, 1)
+		padding-top: 8em
+		padding-bottom: 8em
 
 	.brand
 		position: relative
@@ -88,7 +90,7 @@
 		margin-top: 0
 		margin-bottom: 0
 		line-height: 1
-		font-size: 5.2em
+		font-size: 4.8em
 		font-weight: bold
 		text-align: center
 		text-transform: uppercase
@@ -100,11 +102,11 @@
 		position: relative
 		z-index: 998
 		text-align: center
-		font-size: 1em
+		font-size: 0.95em
 		font-weight: 600
 		margin-top: 0.5em
 		margin-bottom: 0
-		color: #A2A2A2
+		color: #A4A4A4
 		text-transform: none
 		// text-shadow: 0 1px 3px rgba(0,0,0,0.8)
 		// opacity: 0
@@ -139,7 +141,13 @@
 @media screen and (min-width: 0px) and (max-width: 910px)
 
 	#home-feature
-		height: 500px
+
+		.home-feature-wrapper
+			margin: 4em auto
+
+		.feature-content
+			padding-top: 4em
+			padding-bottom: 4em
 
 
 @media screen and (min-width: 0px) and (max-width: 660px)

@@ -200,8 +200,39 @@ p.feature-caption
   font-size: 0.9em
   font-style: italic
   color: #BABABA
-  padding: 0.75em 
+  padding: 0.75em
   text-align: center
+
+#services-nav
+  padding: 1.5em 0
+  border-bottom: 1px solid #F0F0F0
+  list-style: none
+  text-align: center
+
+  li
+    display: inline-block
+    margin: 0 2em
+
+    a,
+    a:visited
+      color: $text_grey
+      font-size: 0.9em
+      vertical-align: middle
+      text-align: center
+      line-height: 1
+      display: block
+
+      &:hover,
+      &:focus
+        color: $purple
+
+      i
+        // margin-right: 0.6em
+        // position: relative
+        // top: 1px
+        display: block
+        font-size: 1.85em
+        margin-bottom: 0.35em
 
 #services
   .home-service
@@ -215,7 +246,6 @@ p.feature-caption
     font-size: 2.8em
     font-weight: 300
     margin: 0.2em 0 0.75em
-
 
     &.web-design
       margin-top: 0.8em
@@ -272,6 +302,9 @@ p.feature-caption
       &.lovehatefilms
         // height: 216px
         background-image: url(<%= asset_path 'lovehatefilms-logo.png' %>)
+
+      &.mmtn
+        background-image: url(<%= asset_path 'mmtn-logo.png' %>)
 
       &.idyia
         // height: 234px
@@ -802,6 +835,21 @@ footer
 @media screen and (min-width: 0px) and (max-width: 860px)
   dl.numbered
     padding: 0 0 0 4em
+
+@media screen and (min-width: 0px) and (max-width: 560px)
+  #services-nav
+    padding: 1em 0
+
+    li
+      margin: 0 0.5em
+
+      a,
+      a:visited
+        font-size: 0.8em
+
+        i
+          font-size: 1.5em
+
 
 
 @import "_home_animation"

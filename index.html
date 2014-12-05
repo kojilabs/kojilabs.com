@@ -3,22 +3,32 @@ layout: default
 title: Koji Labs - Web Design Studio
 description: Koji Labs is a web design and development studio that works to establish and grow the web presence of small to medium-sized businesses.
 ---
-
   <section id="home-feature" class="container content-box">
+
+
+
+    <!-- <div class="six columns pull-right feature-content">
+      <h1 class="brand">Koji Labs</h1>
+      <p class="slogan"><span>Web Design Studio</span> <i class="fa fa-map-marker"></i> Market Harborough, England</p>
+    </div> -->
+
     <div class="home-feature-wrapper">
-    	<h1 class="brand">Koji Labs</h1>
-      <h2 class="slogan"><span>Web Design Studio</span> <i class="fa fa-map-marker"></i> Market Harborough, England</h2>
+      <h1 class="brand">Koji Labs</h1>
+      <p class="slogan"><span>Web Design Studio</span> <i class="fa fa-map-marker"></i> Market Harborough, England</p>
     </div>
-    <a href="#services" class="learn-more">
-      what we do<br>
-      <i class="fa fa-chevron-down"></i>
-    </a>
   </section>
 
   <section id="services" class="container content-box">
-    <div class="clearfix home-service first eleven columns centered">
+    <ul id="services-nav" class="ten columns centered">
+      <li><a href="#web-design"><i class="icon-ampersand"></i>Web Design</a></li>
+      <li><a href="#web-applications"><i class="icon-wrench_screwdriver"></i>Web Applications</a></li>
+      <li><a href="#products"><i class="icon-genius"></i>Our Products</a></li>
+    </ul>
+
+
+    <div id="web-design" class="clearfix home-service first eleven columns centered">
       <div class="six columns pull-right">
-        <h2 class="web-design">Website Design</h2>
+        <h2 class="web-design">Web Design</h2>
         <p>
           We work with businesses to design and build bespoke websites that meet the specific needs of the client. After many years in the industry we've acquired a wealth of knowledge about what works, and what doesn't work when promoting your business online.
         </p>
@@ -41,7 +51,7 @@ description: Koji Labs is a web design and development studio that works to esta
       </div>
     </div>
 
-    <div class="clearfix home-service eleven columns centered">
+    <div id="web-applications" class="clearfix home-service eleven columns centered">
       <div class="six columns">
         <h2>Web Applications</h2>
         <p>
@@ -66,9 +76,9 @@ description: Koji Labs is a web design and development studio that works to esta
       </div>
     </div>
 
-    <div class="clearfix home-service eleven columns centered">
+    <div id="products" class="clearfix home-service eleven columns centered">
       <div class="six columns pull-right">
-        <h2>Products</h2>
+        <h2>Our Products</h2>
         <p>
           As well as working directly with clients, we also develop a number of digital and physical products that satisfy our own entrepreneurial urges.
         </p>
@@ -95,6 +105,15 @@ description: Koji Labs is a web design and development studio that works to esta
   <section id="home-projects" class="container content-box">
   	<h2><a href="/portfolio/">Recent Clients</a></h2>
     <div class="project home four columns no-border">
+      <a href="/portfolio/meet-my-training-needs/">
+        <div class="project-image mmtn"></div>
+        <div class="project-info">
+          <div class="project-title">Meet My Training Needs</div>
+          <div class="project-tech">Responsive Web Design</div>
+        </div>
+      </a>
+    </div>
+    <div class="project home four columns">
       <a href="/portfolio/love-hate-films/">
         <div class="project-image lovehatefilms"></div>
         <div class="project-info">
@@ -136,15 +155,6 @@ description: Koji Labs is a web design and development studio that works to esta
         <div class="project-info">
           <div class="project-title">LOCARN</div>
           <div class="project-tech">Ruby on Rails Development</div>
-        </div>
-      </a>
-    </div>
-    <div class="project home four columns">
-      <a href="/portfolio/wlcome/">
-        <div class="project-image wlcome"></div>
-        <div class="project-info">
-          <div class="project-title">wlcome</div>
-          <div class="project-tech">Branding <span class="plus">+</span> Responsive Web Design</div>
         </div>
       </a>
     </div>
