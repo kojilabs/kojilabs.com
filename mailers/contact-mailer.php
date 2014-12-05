@@ -1,6 +1,8 @@
 <?php
 	// Check that this is a POST request.
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		require_once 'mandrill-api-php/src/Mandrill.php';
+		$mandrill = new Mandrill('r5zyrMkYtKdbiu-yx40waw');
 
 		// Get the form fields and remove whitespace.
     $name = strip_tags(trim($_POST["name"]));
@@ -90,7 +92,26 @@
 											</html>';
 
 		// Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
+		$message = array(
+			'html' => $email_content,
+			'subject' => $subject,
+			'from_email' => $email,
+			'from_name' => $name,
+			'to' => array(
+				array(
+					'email' => $recipient,
+					'type' => 'to'
+				)
+			),
+			'preserve_recipients' => false
+		);
+		$async = false;
+		$ip_pool = 'Main Pool';
+		$send_at = null;
+		$result = $mandrill->messages->send($message, $async, $ip_pool, $send_at);
+
+		// Send the email.
+		if ($result[0]['status'] == 'sent') {
       // Set a 200 (okay) response code.
       header("HTTP/1.1 200 OK");
       echo "Thank you! Your enquiry has been sent. Matt will be in touch shortly.";
