@@ -1,0 +1,60 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #F7F7F7;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+#page-wrapper {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	padding: 3em;
+	margin: 4em auto 1em;
+	width: 480px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3.5em;
+	margin: 0.5em 0;
+	font-weight: normal;
+	font-family: "chaparral-pro",sans-serif;
+}
+
+p {
+	line-height: 1.8em;
+	font-size: 0.9em;
+	font-family: "proxima-nova", sans-serif;
+}
+
+img {
+	width: 220px;
+	margin: 0.5em 0;
+}
+
+.signature {
+	line-height: 1.2em;
+}
+
+.title {
+	font-size: 0.9em;
+	color: #999;
+}
+
+a,
+a:visited {
+	color: #08C;
+	text-decoration: none;
+}
+
+a:focus,
+a:active,
+a:hover {
+	text-decoration: underline;
+}
